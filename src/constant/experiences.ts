@@ -8,9 +8,17 @@ export interface IExperience {
 
 export const enExperiences: IExperience[] = [
   {
+    company: "Winter Energies",
+    title: "Software engineer",
+    years: "2024 - (ongoing)",
+    description:
+      "As a frontend developer at Winter Energies, I create modern, high-performance user interfaces with Next.js, TailwindCSS, and TypeScript, contributing to sustainable energy consumption by delivering scalable and reliable solutions.",
+    technologies: ["TypeScript", "Next.js", "React", "TailwindCSS", "JEST", "Docker", "React Native", "AGILE"],
+  },
+  {
     company: "La Boîte Immo",
     title: "Software engineer",
-    years: "2022 (ongoing)",
+    years: "2022 - 2024",
     description:
       "Building robust real estate management software to streamline operations and enhance efficiency for independent real estate agents.",
     technologies: [
@@ -80,6 +88,14 @@ export const enExperiences: IExperience[] = [
 ];
 
 export const frExperiences: IExperience[] = [
+  {
+    company: "Winter Energies",
+    title: "Développeur frontend",
+    years: "2024 - (ongoing)",
+    description:
+      "En tant que développeur frontend chez Winter Energies, je conçois des interfaces utilisateur modernes et performantes avec Next.js, TailwindCSS et TypeScript, contribuant à une consommation énergétique durable en fournissant des solutions évolutives et fiables.",
+    technologies: ["TypeScript", "Next.js", "React", "TailwindCSS", "JEST", "Docker", "React Native", "AGILE"],
+  },
   {
     company: "La Boîte Immo",
     title: "Développeur fullstack",
