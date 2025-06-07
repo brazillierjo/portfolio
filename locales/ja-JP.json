@@ -123,6 +123,18 @@
     "go_to_contact": "私に連絡する",
     "items": [
       {
+        "title": "AI映画・ドラマ推薦アプリ",
+        "description": "Geminiによるカスタムプロンプトをもとに、映画やドラマをパーソナライズしておすすめするReact Native製クロスプラットフォームアプリ。ユーザーはコンテンツの種類、件数、評価・公開日・配信サービスなどのフィルターを指定可能。AIは親しみやすいメッセージと共に、TMDB APIの情報を用いた詳細なカード形式で提案を表示。",
+        "codeUrl": "https://github.com/brazillierjo/what-movie-tonight",
+        "technologies": [
+          "React Native",
+          "TailwindCSS",
+          "Framer motion",
+          "Gemini",
+          "TMDB API"
+        ]
+      },
+      {
         "title": "履歴書ジェネレーター",
         "description": "NuxtとPuppeteerで作成したこのプロジェクトは、PDF形式で履歴書を生成することができます。ソースコードはGitHubで公開しています。",
         "appUrl": "https://cv-generator-dun-beta.vercel.app/",

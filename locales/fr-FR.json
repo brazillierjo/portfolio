@@ -123,6 +123,19 @@
     "go_to_contact": "Contactez-moi",
     "items": [
       {
+        "title": "App IA de recommandations de films et séries",
+        "description": "Application React Native cross-platform permettant de recevoir des recommandations personnalisées de films ou séries via un prompt IA (Gemini). L'utilisateur peut préciser le type de contenu, le nombre de suggestions, des filtres (note, date, plateforme) et des détails comme un acteur ou une époque. L’IA génère un message amical et présente les recommandations sous forme de cartes enrichies avec les données de l'API TMDB.",
+        "codeUrl": "https://github.com/brazillierjo/what-movie-tonight",
+        "technologies": [
+          "React Native",
+          "TailwindCSS",
+          "Framer motion",
+          "Gemini",
+          "TMDB API"
+        ]
+      },
+
+      {
         "title": "Générateur de CV",
         "description": "Réalisé avec Nuxt et Puppeteer, ce projet me permet de me générer un CV en PDF. Le code source est disponible sur GitHub.",
         "appUrl": "https://cv-generator-dun-beta.vercel.app/",

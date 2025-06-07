@@ -123,6 +123,18 @@
     "go_to_contact": "Contact",
     "items": [
       {
+        "title": "AI-Powered Movie & TV Show Recommender App",
+        "description": "A cross-platform React Native app that gives personalized movie or TV show recommendations based on a custom prompt handled by Gemini. Users can specify the type of content, number of suggestions, and apply filters (rating, release date, streaming platform). The AI returns a friendly message and a set of detailed cards populated with TMDB data.",
+        "codeUrl": "https://github.com/brazillierjo/what-movie-tonight",
+        "technologies": [
+          "React Native",
+          "TailwindCSS",
+          "Framer motion",
+          "Gemini",
+          "TMDB API"
+        ]
+      },
+      {
         "title": "CV Generator",
         "description": "Built with Nuxt and Puppeteer, this project allows me to generate a PDF resume. The source code is available on GitHub.",
         "appUrl": "https://cv-generator-dun-beta.vercel.app/",
