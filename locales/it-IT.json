@@ -129,8 +129,26 @@
     "go_to_contact": "Contattami",
     "items": [
       {
+        "title": "Mio Tutore - App di apprendimento linguistico con IA",
+        "description": "Un'applicazione interattiva di apprendimento linguistico basata sull'IA, che offre conversazioni vocali e scritte personalizzate adattate al tuo livello. Le funzionalità includono modalità vocale con conversazioni IA immersive, modalità scritta con correzioni in tempo reale, quiz QCER personalizzati, supporto multilingue (10+ lingue), monitoraggio dei progressi con memoria contestuale e un modello di abbonamento freemium tramite Stripe. L'app supporta l'apprendimento di italiano, inglese, francese, spagnolo, tedesco, portoghese, russo, giapponese, coreano e cinese con progressione adattiva dai livelli A1 a C2.",
+        "appUrl": "https://mio-tutore.vercel.app/fr",
+        "codeUrl": "https://github.com/brazillierjo/mio-tutore",
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "MongoDB",
+          "Gemini AI",
+          "NextAuth.js",
+          "Stripe",
+          "TailwindCSS",
+          "Framer Motion"
+        ]
+      },
+      {
         "title": "App IA per raccomandazioni di film e serie",
         "description": "Applicazione React Native cross-platform che fornisce raccomandazioni personalizzate di film o serie tramite un prompt IA (Gemini). L'utente può specificare il tipo di contenuto, il numero di suggerimenti, i filtri (valutazione, data, piattaforma) e dettagli come un attore o un'epoca. L'IA genera un messaggio amichevole e presenta le raccomandazioni sotto forma di schede arricchite con i dati dell'API TMDB.",
+        "appUrl": "https://fastflix-nu.vercel.app",
         "codeUrl": "https://github.com/brazillierjo/what-movie-tonight",
         "technologies": [
           "React Native",

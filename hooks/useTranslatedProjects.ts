@@ -23,6 +23,10 @@ export const useTranslatedProjects = (): IProject[] => {
         t('projects.items[0].technologies[2]'),
         t('projects.items[0].technologies[3]'),
         t('projects.items[0].technologies[4]'),
+        t('projects.items[0].technologies[5]'),
+        t('projects.items[0].technologies[6]'),
+        t('projects.items[0].technologies[7]'),
+        t('projects.items[0].technologies[8]'),
       ],
     },
     {
@@ -34,6 +38,8 @@ export const useTranslatedProjects = (): IProject[] => {
         t('projects.items[1].technologies[0]'),
         t('projects.items[1].technologies[1]'),
         t('projects.items[1].technologies[2]'),
+        t('projects.items[1].technologies[3]'),
+        t('projects.items[1].technologies[4]'),
       ],
     },
     {
@@ -94,6 +100,17 @@ export const useTranslatedProjects = (): IProject[] => {
         t('projects.items[6].technologies[0]'),
         t('projects.items[6].technologies[1]'),
         t('projects.items[6].technologies[2]'),
+      ],
+    },
+    {
+      title: t('projects.items[7].title'),
+      description: t('projects.items[7].description'),
+      appUrl: t('projects.items[7].appUrl'),
+      codeUrl: t('projects.items[7].codeUrl'),
+      technologies: [
+        t('projects.items[7].technologies[0]'),
+        t('projects.items[7].technologies[1]'),
+        t('projects.items[7].technologies[2]'),
       ],
     },
   ]

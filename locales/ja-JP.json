@@ -129,8 +129,26 @@
     "go_to_contact": "私に連絡する",
     "items": [
       {
+        "title": "Mio Tutore - AI言語学習アプリ",
+        "description": "AIを活用したインタラクティブな言語学習アプリケーションで、あなたのレベルに合わせてカスタマイズされた音声および文章による会話を提供します。没入型AIによる音声モード、リアルタイム修正機能付き文章モード、パーソナライズされたCEFR準拠クイズ、10以上の言語対応、コンテキストメモリによる進捗追跡、Stripeによるフリーミアム課金モデルなどの機能を搭載。イタリア語、英語、フランス語、スペイン語、ドイツ語、ポルトガル語、ロシア語、日本語、韓国語、中国語の学習に対応し、A1からC2レベルまでの適応的な進行システムを提供します。",
+        "appUrl": "https://mio-tutore.vercel.app/fr",
+        "codeUrl": "https://github.com/brazillierjo/mio-tutore",
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "MongoDB",
+          "Gemini AI",
+          "NextAuth.js",
+          "Stripe",
+          "TailwindCSS",
+          "Framer Motion"
+        ]
+      },
+      {
         "title": "AI映画・ドラマ推薦アプリ",
         "description": "Geminiによるカスタムプロンプトをもとに、映画やドラマをパーソナライズしておすすめするReact Native製クロスプラットフォームアプリ。ユーザーはコンテンツの種類、件数、評価・公開日・配信サービスなどのフィルターを指定可能。AIは親しみやすいメッセージと共に、TMDB APIの情報を用いた詳細なカード形式で提案を表示。",
+        "appUrl": "https://fastflix-nu.vercel.app",
         "codeUrl": "https://github.com/brazillierjo/what-movie-tonight",
         "technologies": [
           "React Native",
