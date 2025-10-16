@@ -39,6 +39,12 @@
     "go_to_educations": "My educations",
     "items": [
       {
+        "company": "Encore Mieux",
+        "title": "Software Engineer - Frontend",
+        "years": "2025 (ongoing)",
+        "description": "As a Frontend Engineer at Encore Mieux, I design and develop an innovative application that allows hotel guests to check in automatically, access the hotel, and unlock their rooms directly from their smartphones. The app provides a seamless, contactless experience while optimizing access management and guest satisfaction through a modern and intuitive interface."
+      },
+      {
         "company": "Winter Energies",
         "title": "Software engineer",
         "years": "2024 - (ongoing)",

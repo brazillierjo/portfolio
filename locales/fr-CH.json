@@ -39,6 +39,12 @@
     "go_to_educations": "Mes formations",
     "items": [
       {
+        "company": "Encore Mieux",
+        "title": "Ingénieur logiciel - Frontend",
+        "years": "2025 (en cours)",
+        "description": "En tant que développeur frontend chez Encore Mieux, je conçois et développe une application innovante permettant aux clients d’hôtels de s’enregistrer automatiquement, d’accéder à l’établissement et à leur chambre directement depuis leur smartphone. L’application vise à offrir une expérience fluide et sans contact, tout en optimisant la gestion des accès et la satisfaction client grâce à une interface moderne et intuitive"
+      },
+      {
         "company": "Winter Energies",
         "title": "Ingénieur logiciel",
         "years": "2024 - (en cours)",
