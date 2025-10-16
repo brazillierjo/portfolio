@@ -33,8 +33,8 @@ useHead({
     <HeroSection />
     <About />
     <Experiences />
-    <Educations />
     <Projects />
+    <Educations />
     <Contact />
     <Footer />
   </main>

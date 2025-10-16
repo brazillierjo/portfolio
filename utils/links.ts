@@ -12,7 +12,7 @@ export const links: Link[] = [
     name: 'links.experiences',
     icon: 'mdi:briefcase-outline',
   },
-  { id: 'educations', name: 'links.educations', icon: 'mdi:school-outline' },
   { id: 'projects', name: 'links.projects', icon: 'mdi:code-tags' },
+  { id: 'educations', name: 'links.educations', icon: 'mdi:school-outline' },
   { id: 'contact', name: 'links.contact', icon: 'mdi:email-outline' },
 ]
