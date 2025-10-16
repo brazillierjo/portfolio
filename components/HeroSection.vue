@@ -12,12 +12,13 @@ const getCVFilename = (locale: string) => {
   const baseName = 'CV-RINCON_BRAZILLIER_Johan'
 
   const cvMap: Record<string, string> = {
-    'fr-CH': `${baseName}-ch.pdf`,
     'fr-FR': `${baseName}-fr.pdf`,
     'en-US': `${baseName}-en.pdf`,
+    'it-IT': `${baseName}-it.pdf`,
+    'ja-JP': `${baseName}-en.pdf`,
   }
 
-  return cvMap[locale] || `${baseName}-en.pdf`
+  return cvMap[locale] || `${baseName}-fr.pdf`
 }
 
 const cvFilename = getCVFilename(locale.value)
