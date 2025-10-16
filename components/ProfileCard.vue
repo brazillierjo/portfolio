@@ -26,10 +26,26 @@ const { t } = useI18n()
     </div>
 
     <div class="flex flex-col gap-3 text-center">
-      <a :href="`mailto:${Contact.Email}`" class="text-lg font-semibold">{{
-        Contact.Email
-      }}</a>
-      <p class="text-icons">{{ t('profileCard.based_in') }}</p>
+      <div class="flex justify-center gap-4">
+        <a
+          :href="`mailto:${Contact.Email}`"
+          class="border-icons flex h-12 w-12 items-center justify-center rounded-full border-2 text-icons transition-colors duration-200 hover:bg-primary hover:text-secondary"
+          :title="Contact.Email"
+          :aria-label="Contact.Email"
+        >
+          <Icon name="mdi:email-outline" class="h-5 w-5" />
+          <span class="sr-only">{{ Contact.Email }}</span>
+        </a>
+        <a
+          :href="Contact.PhoneLink"
+          class="border-icons flex h-12 w-12 items-center justify-center rounded-full border-2 text-icons transition-colors duration-200 hover:bg-primary hover:text-secondary"
+          :title="Contact.Phone"
+          :aria-label="Contact.Phone"
+        >
+          <Icon name="mdi:phone-outline" class="h-5 w-5" />
+          <span class="sr-only">{{ Contact.Phone }}</span>
+        </a>
+      </div>
     </div>
 
     <div class="my-6 flex justify-center gap-4">
