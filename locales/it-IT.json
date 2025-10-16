@@ -1,0 +1,206 @@
+{
+  "links": {
+    "introduction": "Introduzione",
+    "about": "Chi sono",
+    "experiences": "Esperienze",
+    "educations": "Formazione",
+    "projects": "Progetti",
+    "contact": "Contatto"
+  },
+  "timeline": {
+    "tags": "Tecnologie"
+  },
+  "profileCard": {
+    "developer": "Sviluppatore.",
+    "based_in": "Con sede ad Annecy, Francia 🇫🇷",
+    "hire_me": "ASSUMIMI!"
+  },
+  "heroSection": {
+    "line1": "Ciao!",
+    "line2": "Sono Johan, un ingegnere del software appassionato della creazione di applicazioni web user-friendly. Guarda i miei lavori qui sotto!",
+    "resume": "Scarica il mio CV qui",
+    "about_me": "Chi sono",
+    "years_of": "anni di",
+    "experience": "esperienza"
+  },
+  "aboutMe": {
+    "title1": "il mio",
+    "title2": "percorso",
+    "phrase1": "📚 Inizialmente ho smesso di studiare dopo aver completato un Baccalaureato Tecnologico. Da lavoretti occasionali a lavoretti occasionali, ho capito rapidamente che questo contesto non sarebbe stato sufficiente per me. Quindi, all'età di 21 anni, ho deciso di riprendere gli studi e conseguire una laurea in e-commerce.",
+    "phrase2": "🏋️ Questi studi mi hanno permesso di lavorare come specialista SEO per 6 anni. Questa esperienza mi ha insegnato il funzionamento del mondo professionale, il lavoro di squadra, il peso delle responsabilità, nonché la gestione di un back office e dell'ottimizzazione per i motori di ricerca.",
+    "phrase3": "🍀 Come specialista SEO, lavorare a stretto contatto con gli sviluppatori ha suscitato il mio interesse per questo campo altamente tecnico. Pertanto, mi sono iscritto a un programma di formazione bootcamp di 6 mesi per acquisire i fondamenti della programmazione web e del coding. Successivamente, ho continuato il mio percorso di apprendimento attraverso un programma di apprendistato, conseguendo una laurea in Integrazione/Sviluppo di Applicazioni Web e Mobile con specializzazione in React e Node.js.",
+    "phrase4": "🍾 Da allora, ho lavorato con diverse aziende su integrazioni complete, fornendo assistenza per consegnare progetti in tempo, apportando modifiche e aggiungendo nuove funzionalità...",
+    "phrase5": "👷 Oggi, traendo forza dal mio percorso, padroneggio le complessità della metodologia Agile, i principi del Clean Code e le pipeline CI/CD, garantendo scalabilità e manutenibilità ottimali per ogni applicazione web che sviluppo. La mia esperienza diversificata, che spazia dalla SEO alla programmazione, mi permette di portare una prospettiva unica ad ogni progetto.",
+    "phrase6": "🧘‍♂️ Come sviluppatore web dal 2020, mi piace particolarmente lavorare con Nuxt & NextJs in un ambiente Agile, aderendo ai principi del clean code e implementando pipeline CI/CD. Mi piace trasformare mockup di vari stili in siti web dinamici e interattivi per migliorare l'esperienza utente.",
+    "go_to_my_experiences": "Le mie esperienze"
+  },
+  "experiences": {
+    "title": "le mie esperienze",
+    "go_to_educations": "La mia formazione",
+    "items": [
+      {
+        "company": "Encore Mieux",
+        "title": "Ingegnere del software - Frontend",
+        "years": "2025 (in corso)",
+        "description": "Come ingegnere frontend presso Encore Mieux, progetto e sviluppo un'applicazione innovativa che consente agli ospiti degli hotel di effettuare il check-in automaticamente, accedere all'hotel e sbloccare le loro camere direttamente dai loro smartphone. L'app offre un'esperienza fluida e senza contatto ottimizzando al contempo la gestione degli accessi e la soddisfazione degli ospiti attraverso un'interfaccia moderna e intuitiva."
+      },
+      {
+        "company": "Winter Energies",
+        "title": "Ingegnere del software - Frontend",
+        "years": "2024 - 2025",
+        "description": "Come sviluppatore frontend presso Winter Energies, creo interfacce utente moderne e ad alte prestazioni con Next.js, TailwindCSS e TypeScript, contribuendo al consumo energetico sostenibile fornendo soluzioni scalabili e affidabili."
+      },
+      {
+        "company": "La Boîte Immo",
+        "title": "Ingegnere del software",
+        "years": "2022 - 2024",
+        "description": "Sviluppo di diverse applicazioni web per la gestione immobiliare per aiutare gli agenti immobiliari indipendenti."
+      },
+      {
+        "company": "Free-lance",
+        "title": "Sviluppatore freelance",
+        "years": "2022 (in corso)",
+        "description": "Fornire soluzioni su misura ai clienti, garantendo che le loro esigenze uniche siano soddisfatte con competenza di sviluppo di alta qualità."
+      },
+      {
+        "company": "GetUp Agency",
+        "title": "Sviluppatore Front-End",
+        "years": "2022",
+        "description": "Creare esperienze front-end coinvolgenti e user-friendly per i clienti, aiutandoli a raggiungere i loro obiettivi di presenza online."
+      },
+      {
+        "company": "Vitassurance",
+        "title": "Sviluppatore Front-end & Back-end",
+        "years": "2021",
+        "description": "Sito web di intermediazione assicurativa che consente di confrontare rapidamente le offerte di diversi assicuratori. Una volta che il visitatore compila il modulo, le sue informazioni vengono inviate tramite un'API a un CRM per gestire la pratica del nuovo cliente."
+      },
+      {
+        "company": "poupepoupi.com",
+        "title": "Analista Web (6 anni)",
+        "years": "2014 - 2020",
+        "description": "Fornire approfondimenti e ottimizzazioni per massimizzare le prestazioni del sito web e guidare la crescita aziendale attraverso strategie basate sui dati."
+      },
+      {
+        "company": "Grandi catene di negozi | Centri di giardinaggio | Animazione",
+        "title": "Vari lavori in diversi settori",
+        "years": "2011 - 2014",
+        "description": "Acquisizione di competenze versatili ed esperienza preziosa lavorando in ruoli diversi in molteplici settori."
+      }
+    ]
+  },
+  "educations": {
+    "title": "la mia formazione",
+    "go_to_projects": "I miei progetti",
+    "items": [
+      {
+        "company": "3WAcademy",
+        "title": "(Laurea) Integrazione/Sviluppo di Applicazioni Web e Mobile",
+        "years": "2020 - 2021",
+        "description": ""
+      },
+      {
+        "company": "OpenClassrooms",
+        "title": "Sviluppatore Web - Certificazione RNCP di livello 5",
+        "years": "2020",
+        "description": ""
+      },
+      {
+        "company": "Università di Tolone",
+        "title": "(Laurea) E-commerce & Marketing Digitale",
+        "years": "2016 - 2017",
+        "description": ""
+      },
+      {
+        "company": "Défi83 - Tolone",
+        "title": "(Diploma) Gestione delle Unità Commerciali",
+        "years": "2014 - 2016",
+        "description": ""
+      },
+      {
+        "company": "Jean Aicard - Hyères",
+        "title": "Baccalaureato in Scienze e Tecnologie Gestionali",
+        "years": "2010 - 2012",
+        "description": ""
+      }
+    ]
+  },
+  "projects": {
+    "title": "i miei progetti",
+    "go_to_contact": "Contattami",
+    "items": [
+      {
+        "title": "App IA per raccomandazioni di film e serie",
+        "description": "Applicazione React Native cross-platform che fornisce raccomandazioni personalizzate di film o serie tramite un prompt IA (Gemini). L'utente può specificare il tipo di contenuto, il numero di suggerimenti, i filtri (valutazione, data, piattaforma) e dettagli come un attore o un'epoca. L'IA genera un messaggio amichevole e presenta le raccomandazioni sotto forma di schede arricchite con i dati dell'API TMDB.",
+        "codeUrl": "https://github.com/brazillierjo/what-movie-tonight",
+        "technologies": [
+          "React Native",
+          "TailwindCSS",
+          "Framer motion",
+          "Gemini",
+          "TMDB API"
+        ]
+      },
+      {
+        "title": "Generatore di CV",
+        "description": "Realizzato con Nuxt e Puppeteer, questo progetto mi permette di generare un CV in PDF. Il codice sorgente è disponibile su GitHub.",
+        "appUrl": "https://cv-generator-dun-beta.vercel.app/",
+        "codeUrl": "https://github.com/brazillierjo/cv-generator",
+        "technologies": ["Nuxt", "TailwindCSS", "Puppeteer"]
+      },
+      {
+        "title": "Walletoo - L'assistente per la gestione delle finanze personali",
+        "description": "Walletoo è un assistente per la gestione delle finanze personali. Permette di gestire le proprie finanze in tutta semplicità. Basta connettersi e inserire le proprie entrate e spese mensili. Walletoo si occupa di calcolare il reddito disponibile e proporre soluzioni di risparmio, grafici, ecc.",
+        "appUrl": "",
+        "codeUrl": "https://github.com/brazillierjo/wallet",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Bun",
+          "TypeScript",
+          "Elysia",
+          "PostgreSQL",
+          "Docker",
+          "TailwindCSS",
+          "Prisma"
+        ]
+      },
+      {
+        "title": "Generatore di sessioni di allenamento [solo mobile-friendly]",
+        "description": "ma-sante.fr è un generatore di sessioni di allenamento 💪. Questa web app genera sessioni con esercizi sempre diversi per ottimizzare i risultati. Accompagnati da una GIF animata, gli esercizi sono facili da riprodurre.",
+        "appUrl": "https://ma-seance.vercel.app/",
+        "codeUrl": "https://github.com/brazillierjo/ma-seance",
+        "technologies": ["React", "TailwindCSS"]
+      },
+      {
+        "title": "Piano",
+        "description": "Dalla registrazione del suono dei tasti al design, questo progetto mi ha insegnato a gestire eventi e prestazioni! Inoltre, puoi passarci ore senza dover comprarne uno 🤓",
+        "appUrl": "https://brazillierjo.github.io/piano/",
+        "codeUrl": "https://github.com/brazillierjo/piano",
+        "technologies": ["JavaScript", "CSS", "HTML"]
+      },
+      {
+        "title": "Calcolatrice Web",
+        "description": "Progetto realizzato per approfondire le mie conoscenze di JavaScript Vanilla. Puoi scegliere tra calcoli di base o calcoli avanzati. Apprendimento della modalità light/night.",
+        "appUrl": "https://brazillierjo.github.io/calculator/",
+        "codeUrl": "https://github.com/brazillierjo/calculator",
+        "technologies": ["JavaScript", "CSS", "HTML"]
+      },
+      {
+        "title": "Markdown Previewer",
+        "description": "Markdown realizzato per una formazione React. Distribuito su GitHub Pages.",
+        "appUrl": "https://brazillierjo.github.io/markdown/",
+        "codeUrl": "https://github.com/brazillierjo/markdown",
+        "technologies": ["React", "TailwindCSS", "Vite"]
+      }
+    ]
+  },
+  "contact": {
+    "title1": "Lavoriamo",
+    "title2": "insieme",
+    "phrase": "Contattami se desideri lavorare insieme!",
+    "contact_me": "Contattami"
+  },
+  "footer": {
+    "built_with": "Realizzato con Nuxt e TailwindCSS con ❤️"
+  }
+}
