@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #28e98c;
+  --color-secondary: #000000;
+  --color-tertiary: #575757;
+  --color-icons: #999;
+  --color-bg: #202020;
+  --color-text: #ffffff;
+
+  --font-sans:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+}
 
 html {
   scroll-behavior: smooth;

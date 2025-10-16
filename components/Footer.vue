@@ -9,7 +9,7 @@ const { t } = useI18n()
 <template>
   <footer class="relative py-6 text-center">
     <div class="relative flex justify-center">
-      <div class="absolute h-[2px] w-1/2 rounded-full bg-tertiary"></div>
+      <div class="bg-tertiary absolute h-[2px] w-1/2 rounded-full"></div>
     </div>
 
     <p class="mt-6 text-sm">{{ t('footer.built_with') }}</p>

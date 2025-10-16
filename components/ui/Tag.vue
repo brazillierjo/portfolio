@@ -9,7 +9,7 @@ const props = defineProps({
 <template>
   <div
     :class="[
-      'flex w-fit items-center gap-2 rounded-full border border-tertiary px-4 py-2 text-xs font-normal uppercase',
+      'border-tertiary flex w-fit items-center gap-2 rounded-full border px-4 py-2 text-xs font-normal uppercase',
       classes,
     ]"
   >

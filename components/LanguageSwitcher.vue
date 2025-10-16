@@ -13,15 +13,15 @@ const currentLocaleName = computed(() => {
 </script>
 
 <template>
-  <div class="absolute left-5 top-6 w-fit xl:left-10 xl:top-12">
+  <div class="absolute top-6 left-5 w-fit xl:top-12 xl:left-10">
     <div
-      class="relative w-full cursor-pointer rounded-full bg-tertiary px-3 py-1.5 pr-8 text-sm font-medium text-text transition"
+      class="bg-tertiary text-text relative w-full cursor-pointer rounded-full px-3 py-1.5 pr-8 text-sm font-medium transition"
     >
       {{ currentLocaleName }}
 
       <Icon
         name="mdi:chevron-down"
-        class="absolute right-3 top-1/2 -translate-y-1/2"
+        class="absolute top-1/2 right-3 -translate-y-1/2"
         size="20"
       />
     </div>

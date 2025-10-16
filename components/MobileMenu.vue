@@ -20,13 +20,13 @@ const toggleMenu = () => (isMenuOpen.value = !isMenuOpen.value)
     <button
       :class="[
         'fixed z-50 flex h-10 w-10 items-center justify-center rounded-full bg-transparent',
-        isMenuOpen ? 'right-14 top-14' : 'right-5 top-5 xl:right-14 xl:top-14',
+        isMenuOpen ? 'top-14 right-14' : 'top-5 right-5 xl:top-14 xl:right-14',
       ]"
       @click="toggleMenu"
     >
       <Icon
         :name="isMenuOpen ? 'mdi:close' : 'mdi:menu'"
-        class="text-white transition-all duration-300 hover:text-primary"
+        class="hover:text-primary text-white transition-all duration-300"
         size="24"
       />
     </button>
@@ -44,14 +44,14 @@ const toggleMenu = () => (isMenuOpen.value = !isMenuOpen.value)
           <Icon
             :name="link.icon"
             :class="[
-              'h-5 w-5 text-icons transition-colors duration-150 group-hover:text-primary',
+              'text-icons group-hover:text-primary h-5 w-5 transition-colors duration-150',
               isActive(link.id) ? 'text-primary' : '',
             ]"
           />
 
           <span
             :class="[
-              'text-sm text-tertiary transition-colors duration-150 group-hover:text-white',
+              'text-tertiary text-sm transition-colors duration-150 group-hover:text-white',
               isActive(link.id) ? 'text-white' : '',
             ]"
           >

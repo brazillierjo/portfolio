@@ -38,7 +38,7 @@ const cvFilename = getCVFilename(locale.value)
     </h1>
 
     <div
-      class="flex flex-col gap-2 text-lg text-icons xl:gap-4"
+      class="text-icons flex flex-col gap-2 text-lg xl:gap-4"
       v-motion-slide-visible-right
     >
       <p>{{ t('heroSection.line1') }} 👋</p>
@@ -48,7 +48,7 @@ const cvFilename = getCVFilename(locale.value)
     <div class="flex flex-col items-center gap-4 lg:flex-row">
       <a :href="`./${cvFilename}`" download="CV-RINCON-BRAZILLIER-Johan.pdf">
         <button
-          class="flex w-fit animate-pulse items-center gap-2 rounded-full border-2 border-primary px-4 py-2 text-sm uppercase text-text transition-all duration-300 hover:bg-primary hover:text-secondary"
+          class="border-primary text-text hover:bg-primary hover:text-secondary flex w-fit animate-pulse items-center gap-2 rounded-full border-2 px-4 py-2 text-sm uppercase transition-all duration-300"
         >
           {{ t('heroSection.resume') }}
           <Icon name="mdi:download" class="h-4 w-4" />
@@ -57,7 +57,7 @@ const cvFilename = getCVFilename(locale.value)
 
       <a
         href="#about"
-        class="w-fit items-center gap-2 rounded-full border-2 border-text px-4 py-2 text-sm uppercase text-text transition-all duration-300 hover:bg-text hover:text-secondary lg:flex"
+        class="border-text text-text hover:bg-text hover:text-secondary w-fit items-center gap-2 rounded-full border-2 px-4 py-2 text-sm uppercase transition-all duration-300 lg:flex"
       >
         {{ t('heroSection.about_me') }}
         <Icon name="mdi:arrow-down" class="h-4 w-4 animate-bounce" />
@@ -66,8 +66,8 @@ const cvFilename = getCVFilename(locale.value)
 
     <div class="flex items-center gap-20">
       <div class="flex flex-col gap-2 text-center">
-        <p class="text-4xl font-bold text-primary">5+</p>
-        <p class="text-sm uppercase text-icons">
+        <p class="text-primary text-4xl font-bold">5+</p>
+        <p class="text-icons text-sm uppercase">
           {{ t('heroSection.years_of') }} <br />
           {{ t('heroSection.experience') }}
         </p>
@@ -83,14 +83,14 @@ const cvFilename = getCVFilename(locale.value)
         class="group flex flex-col items-center transition-all duration-300"
       >
         <div
-          class="stack-icon flex items-center justify-center rounded-full border-4 border-transparent bg-white p-3 transition-all duration-300 group-hover:border-primary"
+          class="stack-icon group-hover:border-primary flex items-center justify-center rounded-full border-4 border-transparent bg-white p-3 transition-all duration-300"
           :style="{ animationDelay: `${index * 0.1}s` }"
         >
           <img :src="stack.icon" :alt="stack.name" class="h-8 w-8" />
         </div>
 
         <span
-          class="mt-2 text-sm text-text transition-colors duration-300 group-hover:text-primary"
+          class="text-text group-hover:text-primary mt-2 text-sm transition-colors duration-300"
         >
           {{ stack.name }}
         </span>

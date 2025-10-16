@@ -8,7 +8,7 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="relative mx-auto w-full rounded-3xl border border-tertiary px-4 py-6 xl:fixed xl:left-8 xl:top-1/2 xl:max-w-[300px] xl:-translate-y-1/2 xl:p-6"
+    class="border-tertiary relative mx-auto w-full rounded-3xl border px-4 py-6 xl:fixed xl:top-1/2 xl:left-8 xl:max-w-[300px] xl:-translate-y-1/2 xl:p-6"
   >
     <div class="mb-8 flex items-center justify-between">
       <h1 class="flex items-center gap-1 text-2xl font-bold" v-motion-fade>
@@ -21,7 +21,7 @@ const { t } = useI18n()
       <img
         src="~/assets/pngs/avatar.png"
         alt="Profile"
-        class="h-[200px] w-[200px] rounded-full border-4 border-tertiary"
+        class="border-tertiary h-[200px] w-[200px] rounded-full border-4"
       />
     </div>
 
@@ -36,22 +36,22 @@ const { t } = useI18n()
       <a
         :href="Contact.GitHub"
         target="_blank"
-        class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-icons"
+        class="border-icons flex h-12 w-12 items-center justify-center rounded-full border-2"
       >
         <Icon
           name="mdi:github"
-          class="h-6 w-6 text-icons transition-all duration-150 hover:text-white"
+          class="text-icons h-6 w-6 transition-all duration-150 hover:text-white"
         />
       </a>
 
       <a
         :href="Contact.LinkedIn"
         target="_blank"
-        class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-icons"
+        class="border-icons flex h-12 w-12 items-center justify-center rounded-full border-2"
       >
         <Icon
           name="mdi:linkedin"
-          class="h-6 w-6 text-icons transition-all duration-150 hover:text-white"
+          class="text-icons h-6 w-6 transition-all duration-150 hover:text-white"
         />
       </a>
     </div>

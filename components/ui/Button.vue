@@ -17,7 +17,7 @@ defineProps({
   <button
     :type="type"
     :class="[
-      'flex items-center justify-center rounded-full border-2 border-primary bg-primary px-4 py-2 font-semibold text-secondary transition-all duration-150 hover:bg-transparent hover:text-primary lg:px-6 lg:py-3',
+      'border-primary bg-primary text-secondary hover:text-primary flex items-center justify-center rounded-full border-2 px-4 py-2 font-semibold transition-all duration-150 hover:bg-transparent lg:px-6 lg:py-3',
       classes,
     ]"
     @click="onClick"

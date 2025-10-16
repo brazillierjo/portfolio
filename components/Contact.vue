@@ -24,15 +24,15 @@ const introduceLink = links.find(link => link.id === 'contact')
       <span class="text-primary">{{ t('contact.title2') }}</span> !
     </h1>
 
-    <a class="text-xl text-text" :href="`mailto:${Contact.Email}`">{{
+    <a class="text-text text-xl" :href="`mailto:${Contact.Email}`">{{
       Contact.Email
     }}</a>
 
-    <p class="text-lg text-icons">{{ t('contact.phrase') }}</p>
+    <p class="text-icons text-lg">{{ t('contact.phrase') }}</p>
 
     <a
       :href="`mailto:${Contact.Email}`"
-      class="hover:bg-primary-light flex items-center gap-2 rounded-md bg-primary px-6 py-3 font-semibold text-secondary shadow-md transition duration-300"
+      class="hover:bg-primary-light bg-primary text-secondary flex items-center gap-2 rounded-md px-6 py-3 font-semibold shadow-md transition duration-300"
     >
       {{ t('contact.contact_me') }}
       <Icon name="mdi:email-outline" class="h-5 w-5" />

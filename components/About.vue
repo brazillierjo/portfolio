@@ -37,7 +37,7 @@ const paragraphKeys = [
       <p
         v-for="(key, index) in paragraphKeys"
         :key="index"
-        class="text-justify xl:text-text"
+        class="xl:text-text text-justify"
         v-motion-slide-visible-right
       >
         {{ t(key) }}
@@ -46,7 +46,7 @@ const paragraphKeys = [
 
     <a
       href="#experiences"
-      class="w-fit items-center gap-2 rounded-full border-2 border-text px-4 py-2 text-sm uppercase text-text transition-all duration-300 hover:bg-text hover:text-secondary lg:flex"
+      class="border-text text-text hover:bg-text hover:text-secondary w-fit items-center gap-2 rounded-full border-2 px-4 py-2 text-sm uppercase transition-all duration-300 lg:flex"
     >
       {{ t('aboutMe.go_to_my_experiences') }}
       <Icon name="mdi:arrow-down" class="h-4 w-4 animate-bounce" />

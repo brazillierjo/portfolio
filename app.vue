@@ -1,7 +1,7 @@
 <template>
   <NuxtRouteAnnouncer />
 
-  <Body class="mt-16 bg-bg p-4 text-text xl:mt-0 xl:p-8">
+  <Body class="bg-bg text-text mt-16 p-4 xl:mt-0 xl:p-8">
     <NuxtLayout>
       <NuxtLoadingIndicator />
       <NuxtPage />
