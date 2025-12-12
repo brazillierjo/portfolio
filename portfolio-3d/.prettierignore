@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+
+# Build
+.next
+out
+build
+dist
+
+# Cache
+.cache
+.turbo
+
+# Generated
+next-env.d.ts
+*.lock
+package-lock.json
+
+# Assets
+public
+*.svg
+*.ico
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.glb
+*.gltf
+*.hdr
