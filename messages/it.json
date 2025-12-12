@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "title": "Johan R. BRAZILLIER - Sviluppatore Fullstack",
+    "description": "Sviluppatore Web Esperto in React, Next.js, Nuxt & TypeScript. Trasformare mockup in esperienze digitali impeccabili."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "experience": "Esperienza",
+    "projects": "Progetti",
+    "contact": "Contatto",
+    "downloadCV": "Scarica CV"
+  },
+  "hero": {
+    "available": "DISPONIBILE PER LAVORO",
+    "greeting": "SVILUPPATORE FULLSTACK",
+    "title": "Johan R. BRAZILLIER",
+    "subtitle": "Sviluppatore Web / Esperto",
+    "highlight": "React, Next.js, Nuxt & TypeScript",
+    "description": "Trasformare mockup in esperienze digitali impeccabili. Doppia competenza tecnica & SEO.",
+    "cta": "Vedi i miei progetti",
+    "contact": "Contattami",
+    "yearsExperience": "ANNI DI\nESPERIENZA",
+    "stackTitle": "STACK TECNICO"
+  },
+  "projects": {
+    "title": "Ultimi",
+    "highlight": "Progetti",
+    "subtitle": "Una selezione di progetti recenti che combinano performance e design",
+    "viewAll": "Vedi tutti",
+    "featured": "PROGETTO IN EVIDENZA",
+    "recent": "Progetti Recenti",
+    "secondary": "Altri Progetti",
+    "viewProject": "Vedi progetto",
+    "viewCode": "Codice sorgente",
+    "cta": {
+      "title": "Hai un progetto in mente?",
+      "description": "Discutiamo del tuo progetto e troviamo insieme la migliore soluzione tecnica.",
+      "button": "Inizia la discussione"
+    }
+  },
+  "about": {
+    "title": "Architetto Web &",
+    "highlight": "Sensibilità SEO",
+    "subtitle": "Doppia competenza rara: competenze tecniche e SEO al servizio dei tuoi progetti digitali.",
+    "skills": {
+      "react": "React / Next.js",
+      "node": "Node.js",
+      "seo": "Technical SEO",
+      "performance": "Web Performance"
+    },
+    "journey": {
+      "title": "Il Mio Percorso",
+      "description": "Dopo un Baccalaureato Tecnologico e alcuni lavoretti, sono tornato a studiare a 21 anni per una laurea in e-commerce. Questi studi mi hanno permesso di lavorare per 6 anni come SEO, dove ho imparato il funzionamento del mondo professionale, il lavoro di squadra e la gestione del posizionamento naturale. Lavorando a stretto contatto con gli sviluppatori, ho avuto voglia di immergermi nel mondo tecnico. Ho quindi frequentato un bootcamp di 6 mesi, poi ho proseguito con una Laurea in Sviluppo di Applicazioni Web e Mobile in alternanza, con specializzazione in React e Node.js. Da allora, ho lavorato in diverse aziende per integrazioni complete, consegnando progetti in tempo e aggiungendo funzionalità. Oggi padroneggio la metodologia Agile, i principi del Clean Code e le pipeline CI/CD. Sviluppatore Web dal 2020, apprezzo particolarmente lavorare con Nuxt e Next.js per trasformare mockup in siti web dinamici e interattivi.",
+      "downloadCV": "Scarica il mio CV"
+    },
+    "experience": {
+      "current": {
+        "title": "Sviluppatore Fullstack",
+        "company": "Architetto Web & Consulente Freelance",
+        "period": "Presente",
+        "tasks": [
+          "Sviluppo applicazioni React/Next.js & e-commerce",
+          "Ottimizzazione Core Web Vitals & Performance",
+          "Clean Architecture/DDD"
+        ]
+      },
+      "previous": {
+        "title": "Conoscenze SEO",
+        "company": "Strategia, Traffic & Conversione",
+        "tasks": [
+          "Audit tecnici & semantici su larga scala",
+          "Design di migrazioni di siti complessi",
+          "Strategie di contenuto & netlinking"
+        ]
+      }
+    },
+    "philosophy": {
+      "title": "La Mia Filosofia",
+      "subtitle": "Il codice non è un fine in sé, è un mezzo per creare soluzioni performanti.",
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "Codifico metodicamente seguendo i principi SOLID e DRY per garantire la stabilità dei progetti."
+      },
+      "agile": {
+        "title": "AGILE",
+        "description": "La mia esperienza di sviluppatore mi permette di ottimizzare il nostro processo secondo le tue esigenze."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Privilegio una visione a lungo termine. Ogni decisione garantisce risultati di qualità."
+      }
+    },
+    "why": {
+      "title": "Perché scegliere la",
+      "highlight": "Doppia Competenza",
+      "description": "La maggior parte dei dev ignora la SEO. La maggior parte degli SEO non sa programmare.",
+      "conclusion": "Faccio da ponte tra i due mondi. Non codifico solo per far funzionare le cose, codifico affinché Google capisca il tuo sito e i tuoi utenti restino.",
+      "cta": "Discuti del tuo progetto"
+    }
+  },
+  "skills": {
+    "title": "Competenza",
+    "highlight": "Tecnica",
+    "subtitle": "Architetto Web & Consulente SEO, trasformo problemi complessi in codice pulito e performante.",
+    "terminal": {
+      "command": "echo $CURRENT_STACK"
+    },
+    "stack": {
+      "title": "Stack Principale",
+      "subtitle": "Una selezione di strumenti e tecnologie che padroneggio per costruire esperienze web robuste e referenziate.",
+      "frontend": "Front-End",
+      "backend": "Back-End",
+      "seo": "SEO"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Sviluppo Front",
+        "description": "Creazione di interfacce pixel-perfect, accessibili e responsive."
+      },
+      "backend": {
+        "title": "Back-End & API",
+        "description": "Logica server sicura, database e architettura."
+      },
+      "seo": {
+        "title": "SEO & Analytics",
+        "description": "Ottimizzazione tecnica per visibilità e conversione."
+      }
+    },
+    "levels": {
+      "title": "Livelli di Padronanza"
+    },
+    "tools": {
+      "title": "AMBIENTE DI LAVORO & STRUMENTI"
+    },
+    "cta": {
+      "title": "Pronto a collaborare?",
+      "description": "Hai un progetto complesso che richiede competenza tecnica particolare e visione SEO strategica? Discutiamone.",
+      "projects": "Vedi i miei progetti",
+      "contact": "Contattami"
+    }
+  },
+  "experience": {
+    "title": "Percorso",
+    "highlight": "Professionale",
+    "subtitle": "Competenza tecnica e strategica. Dallo sviluppo front-end avanzato all'architettura SEO complessa, scopri come ho aiutato le aziende a crescere.",
+    "downloadCV": "Scarica CV",
+    "cta": {
+      "title": "Pronto a collaborare sul tuo prossimo progetto?",
+      "button": "Contattami"
+    }
+  },
+  "contact": {
+    "available": "DISPONIBILE PER LAVORO",
+    "title": "Costruiamo qualcosa di",
+    "highlight": "grande.",
+    "description": "Sono Johan R. BRAZILLIER, sviluppatore Web esperto & specialista SEO, trasformo le tue idee in prodotti digitali ad alte prestazioni.",
+    "email": "SCRIVIMI",
+    "location": "UBICAZIONE",
+    "localTime": "Ora locale:",
+    "cta": {
+      "title": "Pronto a iniziare il tuo progetto?",
+      "description": "Inviami un'email per discutere del tuo progetto. Ti risponderò il prima possibile.",
+      "button": "Invia un'email"
+    }
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Servizio"
+  },
+  "common": {
+    "viewMore": "Vedi di più",
+    "learnMore": "Scopri di più"
+  }
+}
