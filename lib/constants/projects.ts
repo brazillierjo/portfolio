@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     isApp: true,
     status: "production",
     links: {
-      demo: "https://mio-tutor.vercel.app/fr",
+      demo: "https://miotutor.app",
     },
   },
   {

@@ -140,12 +140,20 @@ export function FlagshipProjectSection() {
                 ))}
               </div>
 
-              <Button asChild className="gap-2">
-                <a href="https://mio-tutor.vercel.app/fr" target="_blank" rel="noopener noreferrer">
-                  {t("cta")}
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild className="gap-2">
+                  <a href="https://miotutor.app" target="_blank" rel="noopener noreferrer">
+                    {t("cta")}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" asChild className="gap-2">
+                  <a href="https://miotutor.app/links" target="_blank" rel="noopener noreferrer">
+                    {t("download")}
+                    <Smartphone className="h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
             </motion.div>
           </div>
 
