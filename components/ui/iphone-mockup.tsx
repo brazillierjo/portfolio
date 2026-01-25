@@ -27,13 +27,10 @@ export function IPhoneMockup({ src, alt, className = "" }: IPhoneMockupProps) {
         <div className="relative rounded-[3rem] bg-gradient-to-b from-zinc-600 via-zinc-700 to-zinc-800 p-[2px] shadow-2xl">
           {/* Inner bezel */}
           <div className="rounded-[2.9rem] bg-gradient-to-b from-zinc-800 via-zinc-900 to-black p-[10px]">
-
             {/* Screen bezel */}
             <div className="relative rounded-[2.2rem] bg-black p-[2px]">
-
               {/* Screen container */}
               <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.1rem] bg-black">
-
                 {/* Dynamic Island */}
                 <div className="absolute top-3 left-1/2 z-30 flex h-[30px] w-[100px] -translate-x-1/2 items-center justify-center rounded-full bg-black">
                   {/* Camera lens */}

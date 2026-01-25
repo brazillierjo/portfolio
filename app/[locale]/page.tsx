@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
-import { HeroSection } from "@/components/sections/hero";
 import { FlagshipProjectSection } from "@/components/sections/flagship-project";
+import { HeroSection } from "@/components/sections/hero";
 
 type Params = { locale: string };
 

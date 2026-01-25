@@ -4,14 +4,8 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
-import { Download, Menu, Moon, Sun, Terminal, X } from "lucide-react";
+import { Download, Menu, Moon, Sun, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { PERSONAL_INFO } from "@/lib/constants/personal";
 import { Link, usePathname } from "@/i18n/navigation";

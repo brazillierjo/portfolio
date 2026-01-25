@@ -3,29 +3,10 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
-import { TerminalWindow, TypewriterText } from "@/components/ui/terminal-window";
-import { TECH_STACK } from "@/lib/constants/personal";
+import { TerminalWindow } from "@/components/ui/terminal-window";
 
 export function SkillsHero() {
   const t = useTranslations("skills");
-
-  const terminalContent = `> echo $CURRENT_STACK
-
-{
-  "role": "Full Stack Developer",
-  "location": "Nice, France",
-  "experience": "5+ ans",
-  "specialties": ["TypeScript", "Next.js / Nuxt", "React Native"],
-  "status": "Available for freelance"
-}
-
-> ./run_audit.sh --target-portfolio
-
-✓ Optimisation du profil requis...
-✓ Chargement des modules Core Web Vitals ... OK
-✓ Analyse Performance ... 100/100
-
-> Ready`;
 
   return (
     <section className="py-20">
@@ -53,24 +34,23 @@ export function SkillsHero() {
                 <span className="text-foreground">{"{"}</span>
                 {"\n"}
                 {"  "}
-                <span className="text-accent">"role"</span>:{" "}
-                <span className="text-secondary">"Full Stack Developer"</span>,
+                <span className="text-accent">{'"role"'}</span>:{" "}
+                <span className="text-secondary">{'"Full Stack Developer"'}</span>,{"\n"}
+                {"  "}
+                <span className="text-accent">{'"location"'}</span>:{" "}
+                <span className="text-secondary">{'"Nice, France"'}</span>,{"\n"}
+                {"  "}
+                <span className="text-accent">{'"experience"'}</span>:{" "}
+                <span className="text-secondary">{'"5+ ans"'}</span>,{"\n"}
+                {"  "}
+                <span className="text-accent">{'"specialties"'}</span>: [
+                <span className="text-secondary">{'"TypeScript"'}</span>,{" "}
+                <span className="text-secondary">{'"Next.js / Nuxt"'}</span>,{" "}
+                <span className="text-secondary">{'"React Native"'}</span>],
                 {"\n"}
                 {"  "}
-                <span className="text-accent">"location"</span>:{" "}
-                <span className="text-secondary">"Nice, France"</span>,{"\n"}
-                {"  "}
-                <span className="text-accent">"experience"</span>:{" "}
-                <span className="text-secondary">"5+ ans"</span>,{"\n"}
-                {"  "}
-                <span className="text-accent">"specialties"</span>: [
-                <span className="text-secondary">"TypeScript"</span>,{" "}
-                <span className="text-secondary">"Next.js / Nuxt"</span>,{" "}
-                <span className="text-secondary">"React Native"</span>],
-                {"\n"}
-                {"  "}
-                <span className="text-accent">"status"</span>:{" "}
-                <span className="text-secondary">"Available for freelance"</span>
+                <span className="text-accent">{'"status"'}</span>:{" "}
+                <span className="text-secondary">{'"Available for freelance"'}</span>
                 {"\n"}
                 <span className="text-foreground">{"}"}</span>
                 {"\n\n"}

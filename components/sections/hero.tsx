@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { motion, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -182,7 +182,7 @@ export function HeroSection() {
                   <div className="bg-card border-border hover:border-primary flex h-14 w-14 items-center justify-center rounded-full border-2 transition-colors">
                     <TechIcon name={tech.icon} />
                   </div>
-                  <span className="bg-card text-foreground pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded px-2 py-1 text-xs opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="bg-card text-foreground pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 rounded px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity group-hover:opacity-100">
                     {tech.name}
                   </span>
                 </motion.div>
@@ -191,7 +191,6 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </div>
-
     </section>
   );
 }
@@ -199,46 +198,116 @@ export function HeroSection() {
 function TechIcon({ name }: { name: string }) {
   const icons: Record<string, React.ReactNode> = {
     typescript: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+        alt="TypeScript"
+        width={28}
+        height={28}
+      />
     ),
     javascript: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        alt="JavaScript"
+        width={28}
+        height={28}
+      />
     ),
     nuxt: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" alt="Nuxt" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
+        alt="Nuxt"
+        width={28}
+        height={28}
+      />
     ),
     nextjs: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+        alt="Next.js"
+        width={28}
+        height={28}
+      />
     ),
     vue: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+        alt="Vue.js"
+        width={28}
+        height={28}
+      />
     ),
     react: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        alt="React"
+        width={28}
+        height={28}
+      />
     ),
     tailwind: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        alt="Tailwind CSS"
+        width={28}
+        height={28}
+      />
     ),
     jest: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+        alt="Jest"
+        width={28}
+        height={28}
+      />
     ),
     bun: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg" alt="Bun" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg"
+        alt="Bun"
+        width={28}
+        height={28}
+      />
     ),
     nodejs: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        alt="Node.js"
+        width={28}
+        height={28}
+      />
     ),
     express: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+        alt="Express"
+        width={28}
+        height={28}
+      />
     ),
     mongodb: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+        alt="MongoDB"
+        width={28}
+        height={28}
+      />
     ),
     mysql: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        alt="MySQL"
+        width={28}
+        height={28}
+      />
     ),
     figma: (
-      <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width={28} height={28} />
+      <Image
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+        alt="Figma"
+        width={28}
+        height={28}
+      />
     ),
   };
 

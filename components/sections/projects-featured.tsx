@@ -60,8 +60,12 @@ export function ProjectsFeatured() {
                     <Badge variant="secondary" className="mb-4 w-fit">
                       {project.category[locale]}
                     </Badge>
-                    <h3 className="mb-4 text-2xl font-bold md:text-3xl">{project.title}</h3>
-                    <p className="text-muted-foreground mb-6">{project.description[locale]}</p>
+                    <h3 className="mb-4 text-2xl font-bold md:text-3xl">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-6">
+                      {project.description[locale]}
+                    </p>
 
                     <div className="mb-6 flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
