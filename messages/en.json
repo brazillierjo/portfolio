@@ -41,28 +41,28 @@
     }
   },
   "about": {
-    "title": "Web Architect &",
-    "highlight": "SEO Awareness",
-    "subtitle": "Rare dual expertise: technical and SEO skills serving your digital projects.",
+    "title": "Web & Mobile",
+    "highlight": "Developer",
+    "subtitle": "From websites to mobile apps: fullstack expertise in React, Next.js and React Native serving your digital projects.",
     "skills": {
       "react": "React / Next.js",
-      "node": "Node.js",
+      "node": "React Native",
       "seo": "Technical SEO",
       "performance": "Web Performance"
     },
     "journey": {
       "title": "My Journey",
-      "description": "After a Technical Baccalaureate and a few small jobs, I went back to school at 21 for a degree in e-commerce. This led me to work for 6 years in SEO, where I learned how the professional world works, teamwork, and natural referencing management. Working closely with developers made me want to dive into the technical world. I enrolled in a 6-month bootcamp, then continued with a Web and Mobile Application Developer degree in a work-study program, specializing in React and Node.js. Since then, I've joined several companies for complete integrations, delivering projects on time and adding features. Today, I master Agile methodology, Clean Code principles and CI/CD pipelines. Web Developer since 2020, I particularly enjoy working with Nuxt & Next.js to transform mockups into dynamic and interactive websites.",
+      "description": "After a Technical Baccalaureate and a few small jobs, I went back to school at 21 for a degree in e-commerce. This led me to work for 6 years in SEO, where I learned how the professional world works, teamwork, and natural referencing management. Working closely with developers made me want to dive into the technical world. I enrolled in a 6-month bootcamp, then continued with a Web and Mobile Application Developer degree in a work-study program, specializing in React and Node.js. Since then, I've joined several companies for complete integrations, delivering projects on time and adding features. Today, I master Agile methodology, Clean Code principles and CI/CD pipelines. Web & Mobile Developer since 2020, I work with Next.js and Nuxt for web, and React Native/Expo for iOS and Android mobile applications.",
       "downloadCV": "Download my CV"
     },
     "experience": {
       "current": {
         "title": "Fullstack Developer",
-        "company": "Web Architect & Freelance Consultant",
+        "company": "Web, Mobile & Freelance Consultant",
         "period": "Present",
         "tasks": [
-          "React/Next.js applications & e-commerce development",
-          "Core Web Vitals & Performance optimization",
+          "React Native/Expo mobile apps (iOS & Android)",
+          "React/Next.js web development & e-commerce",
           "Clean Architecture/DDD"
         ]
       },
@@ -109,8 +109,9 @@
     },
     "stack": {
       "title": "Main Stack",
-      "subtitle": "A selection of tools and technologies I master to build robust and referenced web experiences.",
+      "subtitle": "A selection of tools and technologies I master to build robust web and mobile experiences.",
       "frontend": "Front-End",
+      "mobile": "Mobile",
       "backend": "Back-End",
       "seo": "SEO"
     },
@@ -118,6 +119,10 @@
       "frontend": {
         "title": "Front Development",
         "description": "Creating pixel-perfect, accessible and responsive interfaces."
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "Native iOS & Android applications with React Native and Expo."
       },
       "backend": {
         "title": "Back-End & API",
@@ -173,5 +178,41 @@
   "common": {
     "viewMore": "View more",
     "learnMore": "Learn more"
+  },
+  "flagshipProject": {
+    "badge": "FLAGSHIP PROJECT",
+    "title": "My Biggest",
+    "highlight": "Project",
+    "subtitle": "A complete AI-powered language learning application, built from scratch.",
+    "tagline": "Learn a language by talking with AI",
+    "description": "Mio is a language learning mobile app that allows users to practice through real-time voice conversations with an AI tutor. The project includes a mobile app, backend API, intelligent voice agent and social media automation system.",
+    "features": {
+      "voiceAI": "Voice AI",
+      "languages": "6 languages"
+    },
+    "modes": {
+      "talk": "Real-time voice conversations",
+      "practice": "AI-generated exercises",
+      "roleplay": "Immersive scenarios",
+      "progress": "XP, streaks & level tracking"
+    },
+    "cta": "Discover Mio",
+    "architecture": {
+      "title": "Project Architecture",
+      "mobileApp": "Mobile App",
+      "backendApi": "Backend API",
+      "voiceAgent": "Voice Agent",
+      "aiEngine": "AI Engine",
+      "website": "Landing Page",
+      "socialAutomation": "Social Auto."
+    },
+    "techStack": {
+      "title": "Complete Tech Stack",
+      "mobile": "Mobile",
+      "backend": "Backend",
+      "agent": "AI Agent",
+      "infra": "Infrastructure"
+    },
+    "viewAllProjects": "View all my projects"
   }
 }

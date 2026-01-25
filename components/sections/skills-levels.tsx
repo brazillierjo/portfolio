@@ -18,7 +18,7 @@ export function SkillsLevels() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Card className="border-border bg-card mx-auto max-w-2xl">
+          <Card className="border-border bg-card mx-auto max-w-2xl pt-6 pb-6">
             <CardHeader>
               <CardTitle>{t("title")}</CardTitle>
             </CardHeader>

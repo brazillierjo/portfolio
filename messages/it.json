@@ -41,28 +41,28 @@
     }
   },
   "about": {
-    "title": "Architetto Web &",
-    "highlight": "Sensibilità SEO",
-    "subtitle": "Doppia competenza rara: competenze tecniche e SEO al servizio dei tuoi progetti digitali.",
+    "title": "Sviluppatore Web &",
+    "highlight": "Mobile",
+    "subtitle": "Dal sito web all'app mobile: competenza fullstack React, Next.js e React Native al servizio dei tuoi progetti digitali.",
     "skills": {
       "react": "React / Next.js",
-      "node": "Node.js",
+      "node": "React Native",
       "seo": "Technical SEO",
       "performance": "Web Performance"
     },
     "journey": {
       "title": "Il Mio Percorso",
-      "description": "Dopo un Baccalaureato Tecnologico e alcuni lavoretti, sono tornato a studiare a 21 anni per una laurea in e-commerce. Questi studi mi hanno permesso di lavorare per 6 anni come SEO, dove ho imparato il funzionamento del mondo professionale, il lavoro di squadra e la gestione del posizionamento naturale. Lavorando a stretto contatto con gli sviluppatori, ho avuto voglia di immergermi nel mondo tecnico. Ho quindi frequentato un bootcamp di 6 mesi, poi ho proseguito con una Laurea in Sviluppo di Applicazioni Web e Mobile in alternanza, con specializzazione in React e Node.js. Da allora, ho lavorato in diverse aziende per integrazioni complete, consegnando progetti in tempo e aggiungendo funzionalità. Oggi padroneggio la metodologia Agile, i principi del Clean Code e le pipeline CI/CD. Sviluppatore Web dal 2020, apprezzo particolarmente lavorare con Nuxt e Next.js per trasformare mockup in siti web dinamici e interattivi.",
+      "description": "Dopo un Baccalaureato Tecnologico e alcuni lavoretti, sono tornato a studiare a 21 anni per una laurea in e-commerce. Questi studi mi hanno permesso di lavorare per 6 anni come SEO, dove ho imparato il funzionamento del mondo professionale, il lavoro di squadra e la gestione del posizionamento naturale. Lavorando a stretto contatto con gli sviluppatori, ho avuto voglia di immergermi nel mondo tecnico. Ho quindi frequentato un bootcamp di 6 mesi, poi ho proseguito con una Laurea in Sviluppo di Applicazioni Web e Mobile in alternanza, con specializzazione in React e Node.js. Da allora, ho lavorato in diverse aziende per integrazioni complete, consegnando progetti in tempo e aggiungendo funzionalità. Oggi padroneggio la metodologia Agile, i principi del Clean Code e le pipeline CI/CD. Sviluppatore Web & Mobile dal 2020, lavoro con Next.js e Nuxt per il web, e React Native/Expo per le applicazioni mobile iOS e Android.",
       "downloadCV": "Scarica il mio CV"
     },
     "experience": {
       "current": {
         "title": "Sviluppatore Fullstack",
-        "company": "Architetto Web & Consulente Freelance",
+        "company": "Web, Mobile & Consulente Freelance",
         "period": "Presente",
         "tasks": [
-          "Sviluppo applicazioni React/Next.js & e-commerce",
-          "Ottimizzazione Core Web Vitals & Performance",
+          "App mobile React Native/Expo (iOS & Android)",
+          "Sviluppo web React/Next.js & e-commerce",
           "Clean Architecture/DDD"
         ]
       },
@@ -109,8 +109,9 @@
     },
     "stack": {
       "title": "Stack Principale",
-      "subtitle": "Una selezione di strumenti e tecnologie che padroneggio per costruire esperienze web robuste e referenziate.",
+      "subtitle": "Una selezione di strumenti e tecnologie che padroneggio per costruire esperienze web e mobile robuste.",
       "frontend": "Front-End",
+      "mobile": "Mobile",
       "backend": "Back-End",
       "seo": "SEO"
     },
@@ -118,6 +119,10 @@
       "frontend": {
         "title": "Sviluppo Front",
         "description": "Creazione di interfacce pixel-perfect, accessibili e responsive."
+      },
+      "mobile": {
+        "title": "Sviluppo Mobile",
+        "description": "Applicazioni iOS & Android native con React Native ed Expo."
       },
       "backend": {
         "title": "Back-End & API",
@@ -173,5 +178,41 @@
   "common": {
     "viewMore": "Vedi di più",
     "learnMore": "Scopri di più"
+  },
+  "flagshipProject": {
+    "badge": "PROGETTO DI PUNTA",
+    "title": "Il mio più grande",
+    "highlight": "Progetto",
+    "subtitle": "Un'applicazione completa per l'apprendimento delle lingue con IA conversazionale, sviluppata da zero.",
+    "tagline": "Impara una lingua parlando con l'IA",
+    "description": "Mio è un'app mobile per l'apprendimento delle lingue che permette agli utenti di praticare attraverso conversazioni vocali in tempo reale con un tutor IA. Il progetto include un'app mobile, API backend, agente vocale intelligente e sistema di automazione per i social media.",
+    "features": {
+      "voiceAI": "IA Vocale",
+      "languages": "6 lingue"
+    },
+    "modes": {
+      "talk": "Conversazioni vocali in tempo reale",
+      "practice": "Esercizi generati dall'IA",
+      "roleplay": "Scenari immersivi",
+      "progress": "Tracciamento XP, serie e livelli"
+    },
+    "cta": "Scopri Mio",
+    "architecture": {
+      "title": "Architettura del progetto",
+      "mobileApp": "App Mobile",
+      "backendApi": "API Backend",
+      "voiceAgent": "Agente Vocale",
+      "aiEngine": "Motore IA",
+      "website": "Sito Vetrina",
+      "socialAutomation": "Auto. Social"
+    },
+    "techStack": {
+      "title": "Stack tecnico completo",
+      "mobile": "Mobile",
+      "backend": "Backend",
+      "agent": "Agente IA",
+      "infra": "Infrastruttura"
+    },
+    "viewAllProjects": "Vedi tutti i miei progetti"
   }
 }

@@ -41,28 +41,28 @@
     }
   },
   "about": {
-    "title": "Architecte Web &",
-    "highlight": "Sensibilité SEO",
-    "subtitle": "Double compétence rare : expertise technique et SEO au service de vos projets digitaux.",
+    "title": "Développeur Web &",
+    "highlight": "Mobile",
+    "subtitle": "Du site web à l'application mobile : expertise fullstack React, Next.js et React Native au service de vos projets digitaux.",
     "skills": {
       "react": "React / Next.js",
-      "node": "Node.js",
+      "node": "React Native",
       "seo": "Technical SEO",
       "performance": "Web Performance"
     },
     "journey": {
       "title": "Mon Parcours",
-      "description": "Après un Baccalauréat Technologique et quelques petits boulots, j'ai repris mes études à 21 ans pour une licence en e-commerce. Ces études m'ont permis d'exercer pendant 6 ans en tant que SEO, où j'ai appris le fonctionnement du monde professionnel, le travail en équipe et la gestion d'un référencement naturel. En travaillant en étroite collaboration avec des développeurs, j'ai eu envie de plonger dans ce monde technique. Je me suis donc offert un bootcamp de 6 mois, puis j'ai poursuivi avec une Licence Intégrateur/Développeur d'Applications Web et mobile en alternance, avec spécialité React et Node.js. Depuis, j'ai intégré plusieurs entreprises pour des intégrations complètes, livrer des projets à temps et ajouter des fonctionnalités. Aujourd'hui, je maîtrise la méthode Agile, les principes du Clean Code et les pipelines CI/CD. Développeur Web depuis 2020, j'apprécie particulièrement travailler avec Nuxt & Next.js pour transformer des maquettes en sites web dynamiques et interactifs.",
+      "description": "Après un Baccalauréat Technologique et quelques petits boulots, j'ai repris mes études à 21 ans pour une licence en e-commerce. Ces études m'ont permis d'exercer pendant 6 ans en tant que SEO, où j'ai appris le fonctionnement du monde professionnel, le travail en équipe et la gestion d'un référencement naturel. En travaillant en étroite collaboration avec des développeurs, j'ai eu envie de plonger dans ce monde technique. Je me suis donc offert un bootcamp de 6 mois, puis j'ai poursuivi avec une Licence Intégrateur/Développeur d'Applications Web et mobile en alternance, avec spécialité React et Node.js. Depuis, j'ai intégré plusieurs entreprises pour des intégrations complètes, livrer des projets à temps et ajouter des fonctionnalités. Aujourd'hui, je maîtrise la méthode Agile, les principes du Clean Code et les pipelines CI/CD. Développeur Web & Mobile depuis 2020, je travaille avec Next.js et Nuxt pour le web, et React Native/Expo pour les applications mobiles iOS et Android.",
       "downloadCV": "Télécharger mon CV"
     },
     "experience": {
       "current": {
         "title": "Développeur Fullstack",
-        "company": "Architecte Web & Consultant Freelance",
+        "company": "Web, Mobile & Consultant Freelance",
         "period": "Aujourd'hui",
         "tasks": [
-          "Développement d'applications React/Next.js & e-commerce",
-          "Optimisation Core Web Vitals & Performance",
+          "Applications mobiles React Native/Expo (iOS & Android)",
+          "Développement web React/Next.js & e-commerce",
           "Architecture Clean Architecture/DDD"
         ]
       },
@@ -109,8 +109,9 @@
     },
     "stack": {
       "title": "Stack Principale",
-      "subtitle": "Une sélection d'outils et de technologies que je maîtrise pour construire des expériences web robustes et référencées.",
+      "subtitle": "Une sélection d'outils et de technologies que je maîtrise pour construire des expériences web et mobiles robustes.",
       "frontend": "Front-End",
+      "mobile": "Mobile",
       "backend": "Back-End",
       "seo": "SEO"
     },
@@ -118,6 +119,10 @@
       "frontend": {
         "title": "Développement Front",
         "description": "Création d'interfaces pixel-perfect, accessibles et réactives."
+      },
+      "mobile": {
+        "title": "Développement Mobile",
+        "description": "Applications iOS & Android natives avec React Native et Expo."
       },
       "backend": {
         "title": "Back-End & API",
@@ -173,5 +178,41 @@
   "common": {
     "viewMore": "Voir plus",
     "learnMore": "En savoir plus"
+  },
+  "flagshipProject": {
+    "badge": "PROJET PHARE",
+    "title": "Mon plus gros",
+    "highlight": "Projet",
+    "subtitle": "Une application complète d'apprentissage des langues avec IA conversationnelle, développée de A à Z.",
+    "tagline": "Apprends une langue en parlant avec l'IA",
+    "description": "Mio est une application mobile d'apprentissage des langues qui permet aux utilisateurs de pratiquer via des conversations vocales en temps réel avec un tuteur IA. Le projet comprend une app mobile, une API backend, un agent vocal intelligent et un système d'automatisation pour les réseaux sociaux.",
+    "features": {
+      "voiceAI": "IA Vocale",
+      "languages": "6 langues"
+    },
+    "modes": {
+      "talk": "Conversations vocales temps réel",
+      "practice": "Exercices générés par IA",
+      "roleplay": "Scénarios immersifs",
+      "progress": "Suivi XP, séries et niveaux"
+    },
+    "cta": "Découvrir Mio",
+    "architecture": {
+      "title": "Architecture du projet",
+      "mobileApp": "App Mobile",
+      "backendApi": "API Backend",
+      "voiceAgent": "Agent Vocal",
+      "aiEngine": "Moteur IA",
+      "website": "Site Vitrine",
+      "socialAutomation": "Auto. Social"
+    },
+    "techStack": {
+      "title": "Stack technique complète",
+      "mobile": "Mobile",
+      "backend": "Backend",
+      "agent": "Agent IA",
+      "infra": "Infrastructure"
+    },
+    "viewAllProjects": "Voir tous mes projets"
   }
 }

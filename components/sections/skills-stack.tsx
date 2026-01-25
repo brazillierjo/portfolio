@@ -19,6 +19,12 @@ export function SkillsStack() {
       description: t("categories.frontend.description"),
     },
     {
+      key: "mobile",
+      data: TECH_STACK.mobile,
+      title: t("categories.mobile.title"),
+      description: t("categories.mobile.description"),
+    },
+    {
       key: "backend",
       data: TECH_STACK.backend,
       title: t("categories.backend.title"),
@@ -38,6 +44,7 @@ export function SkillsStack() {
         <Tabs defaultValue="frontend" className="w-full">
           <TabsList className="mb-8 w-fit">
             <TabsTrigger value="frontend">{t("stack.frontend")}</TabsTrigger>
+            <TabsTrigger value="mobile">{t("stack.mobile")}</TabsTrigger>
             <TabsTrigger value="backend">{t("stack.backend")}</TabsTrigger>
           </TabsList>
 
@@ -48,7 +55,7 @@ export function SkillsStack() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="border-border bg-card">
+                <Card className="border-border bg-card pt-6 pb-6">
                   <CardHeader>
                     <CardTitle>{category.title}</CardTitle>
                     <p className="text-muted-foreground text-sm">
