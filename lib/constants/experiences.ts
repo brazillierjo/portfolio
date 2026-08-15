@@ -42,6 +42,93 @@ export const EXPERIENCES: Experience[] = [
     technologies: ["Next.js", "React", "TypeScript", "TailwindCSS", "Node.js"],
   },
   {
+    id: "swipelink",
+    title: {
+      fr: "Développeur Fullstack Freelance",
+      en: "Freelance Fullstack Developer",
+      it: "Sviluppatore Fullstack Freelance",
+    },
+    company: "Swipelink",
+    type: "freelance",
+    period: {
+      start: "Juil 2026",
+      end: null,
+    },
+    description: {
+      fr: "Développement d'une plateforme de recrutement : application Next.js (Prisma, Supabase, Stripe) et architecture microservices IA dockerisée sur Google Cloud — OCR de CV, matching par embeddings et enrichissement d'offres via OpenAI et Mistral AI.",
+      en: "Development of a recruitment platform: Next.js application (Prisma, Supabase, Stripe) and dockerized AI microservices architecture on Google Cloud — resume OCR, embeddings-based matching and job enrichment via OpenAI and Mistral AI.",
+      it: "Sviluppo di una piattaforma di recruiting: applicazione Next.js (Prisma, Supabase, Stripe) e architettura a microservizi IA dockerizzata su Google Cloud — OCR di CV, matching tramite embeddings e arricchimento di offerte via OpenAI e Mistral AI.",
+    },
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "Supabase",
+      "Stripe",
+      "OpenAI",
+      "Mistral AI",
+      "Docker",
+      "Google Cloud",
+    ],
+  },
+  {
+    id: "shinobi-coco-gallus",
+    title: {
+      fr: "Développeur Mobile Freelance",
+      en: "Freelance Mobile Developer",
+      it: "Sviluppatore Mobile Freelance",
+    },
+    company: "Shinobi Japanese · Coco Chinese · Gallus French",
+    type: "freelance",
+    period: {
+      start: "Mai 2026",
+      end: null,
+    },
+    description: {
+      fr: "Développement de trois applications mobiles d'apprentissage des langues (japonais, chinois, français), dont Shinobi Japanese et ses 300 000+ téléchargements. Monorepos Turborepo avec React Native/Expo, Firebase (Auth, Firestore, Crashlytics), abonnements RevenueCat, publication App Store & Play Store via EAS, sites vitrines Astro et CMS Sanity.",
+      en: "Development of three language learning mobile apps (Japanese, Chinese, French), including Shinobi Japanese with 300,000+ downloads. Turborepo monorepos with React Native/Expo, Firebase (Auth, Firestore, Crashlytics), RevenueCat subscriptions, App Store & Play Store releases via EAS, Astro landing sites and Sanity CMS.",
+      it: "Sviluppo di tre app mobili per l'apprendimento delle lingue (giapponese, cinese, francese), tra cui Shinobi Japanese con oltre 300.000 download. Monorepo Turborepo con React Native/Expo, Firebase (Auth, Firestore, Crashlytics), abbonamenti RevenueCat, pubblicazione su App Store & Play Store via EAS, siti vetrina Astro e CMS Sanity.",
+    },
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Firebase",
+      "Turborepo",
+      "RevenueCat",
+      "Astro",
+      "Sanity",
+    ],
+  },
+  {
+    id: "big-mamma",
+    title: {
+      fr: "Développeur Fullstack Freelance",
+      en: "Freelance Fullstack Developer",
+      it: "Sviluppatore Fullstack Freelance",
+    },
+    company: "Big Mamma Group",
+    type: "freelance",
+    period: {
+      start: "Mars 2026",
+      end: "Juil 2026",
+    },
+    description: {
+      fr: "Conception d'un outil interne de gestion de restaurants pour le forecasting P&L : prévisions mensuelles de KPIs par les managers et suivi de la performance par la direction. Next.js, Prisma, Supabase (PostgreSQL), interface multilingue avec next-intl, tests Vitest.",
+      en: "Design of an internal restaurant management tool for P&L forecasting: monthly KPI forecasts by managers and performance tracking by leadership. Next.js, Prisma, Supabase (PostgreSQL), multilingual interface with next-intl, Vitest tests.",
+      it: "Progettazione di uno strumento interno di gestione ristoranti per il forecasting P&L: previsioni mensili di KPI da parte dei manager e monitoraggio delle performance da parte della direzione. Next.js, Prisma, Supabase (PostgreSQL), interfaccia multilingue con next-intl, test Vitest.",
+    },
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "Supabase",
+      "next-intl",
+      "Vitest",
+      "TailwindCSS",
+    ],
+  },
+  {
     id: "encore-mieux",
     title: {
       fr: "Développeur Front-End",
@@ -153,84 +240,5 @@ export const EXPERIENCES: Experience[] = [
       it: "Miglioramento SEO del sito e-commerce con tecniche avanzate. Amministrazione e manutenzione del negozio online. Monitoraggio e analisi delle prestazioni tramite strumenti di analytics.",
     },
     technologies: ["SEO", "E-commerce", "Analytics", "Administration web"],
-  },
-];
-
-export interface Formation {
-  id: string;
-  title: {
-    fr: string;
-    en: string;
-    it: string;
-  };
-  school: string;
-  period: string;
-  description: {
-    fr: string;
-    en: string;
-    it: string;
-  };
-}
-
-export const FORMATIONS: Formation[] = [
-  {
-    id: "3w-academy",
-    title: {
-      fr: "Développeur/Intégrateur Web et Mobile",
-      en: "Web and Mobile Developer/Integrator",
-      it: "Sviluppatore/Integratore Web e Mobile",
-    },
-    school: "3W Academy",
-    period: "2020 - 2021",
-    description: {
-      fr: "Formation intensive au développement web et mobile couvrant les technologies front-end et back-end modernes.",
-      en: "Intensive web and mobile development training covering modern front-end and back-end technologies.",
-      it: "Formazione intensiva sullo sviluppo web e mobile che copre le moderne tecnologie front-end e back-end.",
-    },
-  },
-  {
-    id: "openclassrooms",
-    title: {
-      fr: "Développeur Web",
-      en: "Web Developer",
-      it: "Sviluppatore Web",
-    },
-    school: "OpenClassrooms",
-    period: "2020",
-    description: {
-      fr: "Formation en ligne certifiante axée sur le développement web et la programmation informatique.",
-      en: "Certified online training focused on web development and computer programming.",
-      it: "Formazione online certificata incentrata sullo sviluppo web e la programmazione informatica.",
-    },
-  },
-  {
-    id: "licence-ecommerce",
-    title: {
-      fr: "Licence E-commerce et Marketing Numérique",
-      en: "E-commerce and Digital Marketing Degree",
-      it: "Laurea in E-commerce e Marketing Digitale",
-    },
-    school: "Université de Toulon",
-    period: "2016 - 2017",
-    description: {
-      fr: "Formation universitaire combinant compétences techniques et marketing digital pour le commerce en ligne.",
-      en: "University degree combining technical skills and digital marketing for e-commerce.",
-      it: "Laurea universitaria che combina competenze tecniche e marketing digitale per l'e-commerce.",
-    },
-  },
-  {
-    id: "bts-muc",
-    title: {
-      fr: "BTS Management des Unités Commerciales",
-      en: "Business Management Diploma",
-      it: "Diploma in Gestione Aziendale",
-    },
-    school: "Université de Toulon",
-    period: "2014 - 2016",
-    description: {
-      fr: "Formation en management et gestion commerciale avec une approche pratique du commerce.",
-      en: "Management and business training with a practical approach to commerce.",
-      it: "Formazione in management e gestione commerciale con un approccio pratico al commercio.",
-    },
   },
 ];

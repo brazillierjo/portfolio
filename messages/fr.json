@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Johan R. BRAZILLIER - Développeur Fullstack",
-    "description": "Développeur Web Expert React, Next.js, Nuxt & TypeScript. Transformer des maquettes en expériences digitales impeccables."
+    "description": "Développeur Web & Mobile Expert React, Next.js, React Native & TypeScript. Transformer des maquettes en expériences digitales impeccables."
   },
   "nav": {
     "home": "Accueil",
@@ -17,7 +17,7 @@
     "greeting": "DÉVELOPPEUR FULLSTACK",
     "title": "Johan R. BRAZILLIER",
     "subtitle": "Développeur Web / Expert",
-    "highlight": "React, Next.js, Nuxt & TypeScript",
+    "highlight": "React, Next.js, React Native & TypeScript",
     "description": "Transformer des maquettes en expériences digitales impeccables. Double compétence technique & SEO.",
     "cta": "Voir mes projets",
     "contact": "Me contacter",
@@ -185,7 +185,7 @@
     "highlight": "Projet",
     "subtitle": "Une application complète d'apprentissage des langues avec IA conversationnelle, développée de A à Z.",
     "tagline": "Apprends une langue en parlant avec l'IA",
-    "description": "Mio est une application mobile d'apprentissage des langues qui permet aux utilisateurs de pratiquer via des conversations vocales en temps réel avec un tuteur IA. Le projet comprend une app mobile, une API backend, un agent vocal intelligent et un système d'automatisation pour les réseaux sociaux.",
+    "description": "Mio est une application mobile d'apprentissage des langues qui permet aux utilisateurs de pratiquer via des conversations vocales en temps réel avec un tuteur IA. Le projet comprend une app mobile, une API backend servant de passerelle vocale temps réel vers Gemini Live, et un système d'automatisation pour les réseaux sociaux.",
     "features": {
       "voiceAI": "IA Vocale",
       "languages": "6 langues"
@@ -202,7 +202,6 @@
       "title": "Architecture du projet",
       "mobileApp": "App Mobile",
       "backendApi": "API Backend",
-      "voiceAgent": "Agent Vocal",
       "aiEngine": "Moteur IA",
       "website": "Site Vitrine",
       "socialAutomation": "Auto. Social"
@@ -211,7 +210,7 @@
       "title": "Stack technique complète",
       "mobile": "Mobile",
       "backend": "Backend",
-      "agent": "Agent IA",
+      "agent": "IA & Voix",
       "infra": "Infrastructure"
     },
     "viewAllProjects": "Voir tous mes projets"

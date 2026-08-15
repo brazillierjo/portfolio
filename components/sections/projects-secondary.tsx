@@ -21,7 +21,7 @@ export function ProjectsSecondary() {
               key={project.id}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: Math.min(index, 4) * 0.1 }}
               className="group border-border bg-card hover:border-primary/50 flex items-center gap-4 border p-4 transition-colors"
             >
               <div className="border-border bg-background group-hover:border-primary group-hover:bg-primary/10 flex h-10 w-10 shrink-0 items-center justify-center border transition-colors">
@@ -46,7 +46,7 @@ export function ProjectsSecondary() {
               </div>
 
               <div className="flex items-center gap-2">
-                {project.links.demo && (
+                {project.links?.demo && (
                   <a
                     href={project.links.demo}
                     target="_blank"
@@ -56,7 +56,7 @@ export function ProjectsSecondary() {
                     <ExternalLink className="h-4 w-4" />
                   </a>
                 )}
-                {project.links.github && (
+                {project.links?.github && (
                   <a
                     href={project.links.github}
                     target="_blank"

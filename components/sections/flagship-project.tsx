@@ -31,25 +31,23 @@ const itemVariants = {
 const ARCHITECTURE_COMPONENTS = [
   { icon: Smartphone, key: "mobileApp" },
   { icon: Server, key: "backendApi" },
-  { icon: Mic, key: "voiceAgent" },
   { icon: Bot, key: "aiEngine" },
   { icon: Globe, key: "website" },
   { icon: Instagram, key: "socialAutomation" },
 ];
 
-const TECH_STACK = {
+const MIO_STACK = {
   mobile: [
     "React Native",
     "Expo",
     "TypeScript",
     "Zustand",
     "TanStack Query",
-    "LiveKit",
     "i18next",
     "RevenueCat",
   ],
   backend: ["Hono", "Node.js", "Supabase", "PostgreSQL", "Zod", "JWT", "Sentry"],
-  agent: ["Python", "LiveKit Agents", "Google Gemini Live", "Silero VAD"],
+  agent: ["Google Gemini Live", "WebSocket streaming", "Gemini TTS"],
   infra: ["Docker", "Caddy", "GitHub Actions", "VPS Hostinger"],
 };
 
@@ -106,7 +104,7 @@ export function FlagshipProjectSection() {
                 >
                   <div className="flex items-center gap-2">
                     <Bot className="text-primary h-4 w-4" />
-                    <span className="text-sm font-medium">Gemini 2.5</span>
+                    <span className="text-sm font-medium">Gemini Live</span>
                   </div>
                 </motion.div>
                 <motion.div
@@ -172,7 +170,7 @@ export function FlagshipProjectSection() {
             <h3 className="text-center text-xl font-semibold">
               {t("architecture.title")}
             </h3>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
               {ARCHITECTURE_COMPONENTS.map(({ icon: Icon, key }) => (
                 <motion.div
                   key={key}
@@ -192,7 +190,7 @@ export function FlagshipProjectSection() {
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-center text-xl font-semibold">{t("techStack.title")}</h3>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {Object.entries(TECH_STACK).map(([category, techs]) => (
+              {Object.entries(MIO_STACK).map(([category, techs]) => (
                 <div key={category} className="space-y-3">
                   <h4 className="text-primary text-sm font-medium tracking-wider uppercase">
                     {t(`techStack.${category}`)}

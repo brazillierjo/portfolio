@@ -34,9 +34,9 @@ export const PROJECTS: Project[] = [
       it: "APP SAAS COMPLETA",
     },
     description: {
-      fr: "Mon projet le plus ambitieux : une plateforme complète d'apprentissage des langues propulsée par l'IA. L'application propose des conversations vocales en temps réel avec un tuteur IA (via LiveKit + Google Gemini Live), des exercices de grammaire générés par IA, des jeux de rôle immersifs et un suivi de progression complet (séries, XP, niveaux CECRL A1-C2). Architecture monorepo sophistiquée : app React Native/Expo avec Zustand et TanStack Query, API backend Hono/Node.js, agent vocal Python avec LiveKit Agents, base de données Supabase (PostgreSQL), authentification SSO (Google/Apple), gestion des abonnements RevenueCat, analytics PostHog, et un outil de génération automatique de contenus Instagram. Infrastructure auto-hébergée sur VPS avec Docker, Caddy et CI/CD GitHub Actions.",
-      en: "My most ambitious project: a complete AI-powered language learning platform. The app features real-time voice conversations with an AI tutor (via LiveKit + Google Gemini Live), AI-generated grammar exercises, immersive role-playing scenarios and comprehensive progress tracking (streaks, XP, CEFR levels A1-C2). Sophisticated monorepo architecture: React Native/Expo app with Zustand and TanStack Query, Hono/Node.js backend API, Python voice agent with LiveKit Agents, Supabase database (PostgreSQL), SSO authentication (Google/Apple), RevenueCat subscription management, PostHog analytics, and an automated Instagram content generation tool. Self-hosted infrastructure on VPS with Docker, Caddy and GitHub Actions CI/CD.",
-      it: "Il mio progetto più ambizioso: una piattaforma completa per l'apprendimento delle lingue alimentata dall'IA. L'app offre conversazioni vocali in tempo reale con un tutor IA (tramite LiveKit + Google Gemini Live), esercizi di grammatica generati dall'IA, scenari di gioco di ruolo immersivi e monitoraggio completo dei progressi (serie, XP, livelli QCER A1-C2). Architettura monorepo sofisticata: app React Native/Expo con Zustand e TanStack Query, API backend Hono/Node.js, agente vocale Python con LiveKit Agents, database Supabase (PostgreSQL), autenticazione SSO (Google/Apple), gestione abbonamenti RevenueCat, analytics PostHog, e uno strumento di generazione automatica di contenuti Instagram. Infrastruttura self-hosted su VPS con Docker, Caddy e CI/CD GitHub Actions.",
+      fr: "Mon projet le plus ambitieux : une plateforme complète d'apprentissage des langues propulsée par l'IA. L'application propose des conversations vocales en temps réel avec un tuteur IA (API Gemini Live en streaming WebSocket), des exercices de grammaire générés par IA, des jeux de rôle immersifs et un suivi de progression complet (séries, XP, niveaux CECRL A1-C2). Architecture monorepo sophistiquée : app React Native/Expo avec Zustand et TanStack Query, API backend Hono/Node.js servant de passerelle vocale temps réel vers Gemini Live, base de données Supabase (PostgreSQL), authentification SSO (Google/Apple), gestion des abonnements RevenueCat, analytics PostHog, et un outil de génération automatique de contenus Instagram. Infrastructure auto-hébergée sur VPS avec Docker, Caddy et CI/CD GitHub Actions.",
+      en: "My most ambitious project: a complete AI-powered language learning platform. The app features real-time voice conversations with an AI tutor (Gemini Live API over WebSocket streaming), AI-generated grammar exercises, immersive role-playing scenarios and comprehensive progress tracking (streaks, XP, CEFR levels A1-C2). Sophisticated monorepo architecture: React Native/Expo app with Zustand and TanStack Query, Hono/Node.js backend API acting as a real-time voice gateway to Gemini Live, Supabase database (PostgreSQL), SSO authentication (Google/Apple), RevenueCat subscription management, PostHog analytics, and an automated Instagram content generation tool. Self-hosted infrastructure on VPS with Docker, Caddy and GitHub Actions CI/CD.",
+      it: "Il mio progetto più ambizioso: una piattaforma completa per l'apprendimento delle lingue alimentata dall'IA. L'app offre conversazioni vocali in tempo reale con un tutor IA (API Gemini Live in streaming WebSocket), esercizi di grammatica generati dall'IA, scenari di gioco di ruolo immersivi e monitoraggio completo dei progressi (serie, XP, livelli QCER A1-C2). Architettura monorepo sofisticata: app React Native/Expo con Zustand e TanStack Query, API backend Hono/Node.js che funge da gateway vocale in tempo reale verso Gemini Live, database Supabase (PostgreSQL), autenticazione SSO (Google/Apple), gestione abbonamenti RevenueCat, analytics PostHog, e uno strumento di generazione automatica di contenuti Instagram. Infrastruttura self-hosted su VPS con Docker, Caddy e CI/CD GitHub Actions.",
     },
     image: "/projects/mio-screen.png",
     technologies: [
@@ -47,9 +47,8 @@ export const PROJECTS: Project[] = [
       "TanStack Query",
       "Hono",
       "Node.js",
-      "Python",
-      "LiveKit",
-      "Google Gemini",
+      "WebSocket",
+      "Google Gemini Live",
       "Supabase",
       "PostgreSQL",
       "RevenueCat",
@@ -97,7 +96,38 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const SECONDARY_PROJECTS = [
+export interface SecondaryProject {
+  id: string;
+  title: string;
+  description: Project["description"];
+  technologies: string[];
+  links?: Project["links"];
+}
+
+export const SECONDARY_PROJECTS: SecondaryProject[] = [
+  {
+    id: "social-studio",
+    title: "Social Studio",
+    description: {
+      fr: "Plateforme interne d'automatisation marketing : génération de Reels et carrousels Instagram par IA, rendu vidéo programmatique et publication planifiée multi-comptes",
+      en: "Internal marketing automation platform: AI-generated Instagram Reels and carousels, programmatic video rendering and scheduled multi-account publishing",
+      it: "Piattaforma interna di automazione marketing: Reel e caroselli Instagram generati dall'IA, rendering video programmatico e pubblicazione pianificata multi-account",
+    },
+    technologies: ["Next.js", "TypeScript", "Remotion", "Google Gemini", "Supabase"],
+  },
+  {
+    id: "kycamotors",
+    title: "KYCA Motors",
+    description: {
+      fr: "Site vitrine automobile avec animations Framer Motion, formulaires validés par Zod et génération de QR codes",
+      en: "Automotive showcase website with Framer Motion animations, Zod-validated forms and QR code generation",
+      it: "Sito vetrina automobilistico con animazioni Framer Motion, moduli validati con Zod e generazione di codici QR",
+    },
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
+    links: {
+      demo: "https://kycamotors.vercel.app",
+    },
+  },
   {
     id: "wallet",
     title: "Wallet",

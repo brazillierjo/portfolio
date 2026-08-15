@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Johan R. BRAZILLIER - Sviluppatore Fullstack",
-    "description": "Sviluppatore Web Esperto in React, Next.js, Nuxt & TypeScript. Trasformare mockup in esperienze digitali impeccabili."
+    "description": "Sviluppatore Web & Mobile Esperto in React, Next.js, React Native & TypeScript. Trasformare mockup in esperienze digitali impeccabili."
   },
   "nav": {
     "home": "Home",
@@ -17,7 +17,7 @@
     "greeting": "SVILUPPATORE FULLSTACK",
     "title": "Johan R. BRAZILLIER",
     "subtitle": "Sviluppatore Web / Esperto",
-    "highlight": "React, Next.js, Nuxt & TypeScript",
+    "highlight": "React, Next.js, React Native & TypeScript",
     "description": "Trasformare mockup in esperienze digitali impeccabili. Doppia competenza tecnica & SEO.",
     "cta": "Vedi i miei progetti",
     "contact": "Contattami",
@@ -185,7 +185,7 @@
     "highlight": "Progetto",
     "subtitle": "Un'applicazione completa per l'apprendimento delle lingue con IA conversazionale, sviluppata da zero.",
     "tagline": "Impara una lingua parlando con l'IA",
-    "description": "Mio è un'app mobile per l'apprendimento delle lingue che permette agli utenti di praticare attraverso conversazioni vocali in tempo reale con un tutor IA. Il progetto include un'app mobile, API backend, agente vocale intelligente e sistema di automazione per i social media.",
+    "description": "Mio è un'app mobile per l'apprendimento delle lingue che permette agli utenti di praticare attraverso conversazioni vocali in tempo reale con un tutor IA. Il progetto include un'app mobile, un'API backend che funge da gateway vocale in tempo reale verso Gemini Live, e un sistema di automazione per i social media.",
     "features": {
       "voiceAI": "IA Vocale",
       "languages": "6 lingue"
@@ -202,7 +202,6 @@
       "title": "Architettura del progetto",
       "mobileApp": "App Mobile",
       "backendApi": "API Backend",
-      "voiceAgent": "Agente Vocale",
       "aiEngine": "Motore IA",
       "website": "Sito Vetrina",
       "socialAutomation": "Auto. Social"
@@ -211,7 +210,7 @@
       "title": "Stack tecnico completo",
       "mobile": "Mobile",
       "backend": "Backend",
-      "agent": "Agente IA",
+      "agent": "IA & Voce",
       "infra": "Infrastruttura"
     },
     "viewAllProjects": "Vedi tutti i miei progetti"

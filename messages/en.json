@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Johan R. BRAZILLIER - Fullstack Developer",
-    "description": "Web Developer Expert in React, Next.js, Nuxt & TypeScript. Transforming mockups into flawless digital experiences."
+    "description": "Web & Mobile Developer Expert in React, Next.js, React Native & TypeScript. Transforming mockups into flawless digital experiences."
   },
   "nav": {
     "home": "Home",
@@ -17,7 +17,7 @@
     "greeting": "FULLSTACK DEVELOPER",
     "title": "Johan R. BRAZILLIER",
     "subtitle": "Web Developer / Expert",
-    "highlight": "React, Next.js, Nuxt & TypeScript",
+    "highlight": "React, Next.js, React Native & TypeScript",
     "description": "Transforming mockups into flawless digital experiences. Technical skills with SEO knowledge.",
     "cta": "View my projects",
     "contact": "Contact me",
@@ -185,7 +185,7 @@
     "highlight": "Project",
     "subtitle": "A complete AI-powered language learning application, built from scratch.",
     "tagline": "Learn a language by talking with AI",
-    "description": "Mio is a language learning mobile app that allows users to practice through real-time voice conversations with an AI tutor. The project includes a mobile app, backend API, intelligent voice agent and social media automation system.",
+    "description": "Mio is a language learning mobile app that allows users to practice through real-time voice conversations with an AI tutor. The project includes a mobile app, a backend API acting as a real-time voice gateway to Gemini Live, and a social media automation system.",
     "features": {
       "voiceAI": "Voice AI",
       "languages": "6 languages"
@@ -202,7 +202,6 @@
       "title": "Project Architecture",
       "mobileApp": "Mobile App",
       "backendApi": "Backend API",
-      "voiceAgent": "Voice Agent",
       "aiEngine": "AI Engine",
       "website": "Landing Page",
       "socialAutomation": "Social Auto."
@@ -211,7 +210,7 @@
       "title": "Complete Tech Stack",
       "mobile": "Mobile",
       "backend": "Backend",
-      "agent": "AI Agent",
+      "agent": "AI & Voice",
       "infra": "Infrastructure"
     },
     "viewAllProjects": "View all my projects"

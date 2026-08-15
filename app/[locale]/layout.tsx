@@ -28,9 +28,9 @@ export async function generateMetadata({
   };
 
   const descriptions: Record<string, string> = {
-    fr: "Développeur Web Expert React, Next.js, Nuxt & TypeScript. 10 ans d'expérience.",
-    en: "Web Developer Expert in React, Next.js, Nuxt & TypeScript. 10 years of experience.",
-    it: "Sviluppatore Web Esperto in React, Next.js, Nuxt & TypeScript. 10 anni di esperienza.",
+    fr: "Développeur Web & Mobile Expert React, Next.js, React Native & TypeScript. 10 ans d'expérience.",
+    en: "Web & Mobile Developer Expert in React, Next.js, React Native & TypeScript. 10 years of experience.",
+    it: "Sviluppatore Web & Mobile Esperto in React, Next.js, React Native & TypeScript. 10 anni di esperienza.",
   };
 
   return {
