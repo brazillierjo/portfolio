@@ -188,7 +188,7 @@
     "description": "Mio is a language learning mobile app that allows users to practice through real-time voice conversations with an AI tutor. The project includes a mobile app, a backend API acting as a real-time voice gateway to Gemini Live, and a social media automation system.",
     "features": {
       "voiceAI": "Voice AI",
-      "languages": "6 languages"
+      "languages": "13 languages"
     },
     "modes": {
       "talk": "Real-time voice conversations",

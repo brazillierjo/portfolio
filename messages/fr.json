@@ -188,7 +188,7 @@
     "description": "Mio est une application mobile d'apprentissage des langues qui permet aux utilisateurs de pratiquer via des conversations vocales en temps réel avec un tuteur IA. Le projet comprend une app mobile, une API backend servant de passerelle vocale temps réel vers Gemini Live, et un système d'automatisation pour les réseaux sociaux.",
     "features": {
       "voiceAI": "IA Vocale",
-      "languages": "6 langues"
+      "languages": "13 langues"
     },
     "modes": {
       "talk": "Conversations vocales temps réel",
