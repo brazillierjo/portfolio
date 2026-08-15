@@ -74,7 +74,9 @@ export const TECH_STACK = {
     "Remotion",
     "Google Gemini",
     "OpenAI",
+    "Claude",
     "Mistral AI",
+    "DeepSeek",
     "Google Cloud",
     "Figma",
     "Storybook",
@@ -93,6 +95,6 @@ export const SKILL_LEVELS = [
   { name: "Node.js / Hono", level: 85 },
   { name: "Supabase / PostgreSQL", level: 85 },
   { name: "Firebase / Firestore", level: 80 },
-  { name: "Gemini / OpenAI / Mistral", level: 85 },
+  { name: "Gemini / GPT / Claude / Mistral / DeepSeek", level: 85 },
   { name: "Python", level: 70 },
 ] as const;
