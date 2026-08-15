@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { TerminalWindow } from "@/components/ui/terminal-window";
+import { YEARS_OF_EXPERIENCE } from "@/lib/constants/personal";
 
 export function SkillsHero() {
   const t = useTranslations("skills");
@@ -41,7 +42,8 @@ export function SkillsHero() {
                 <span className="text-secondary">{'"Nice, France"'}</span>,{"\n"}
                 {"  "}
                 <span className="text-accent">{'"experience"'}</span>:{" "}
-                <span className="text-secondary">{'"5+ ans"'}</span>,{"\n"}
+                <span className="text-secondary">{`"${YEARS_OF_EXPERIENCE}+ ans"`}</span>,
+                {"\n"}
                 {"  "}
                 <span className="text-accent">{'"specialties"'}</span>: [
                 <span className="text-secondary">{'"TypeScript"'}</span>,{" "}

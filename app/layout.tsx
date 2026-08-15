@@ -17,7 +17,7 @@ const sourceCodePro = Source_Code_Pro({
 export const metadata: Metadata = {
   title: "Johan R. BRAZILLIER - Full Stack Developer & SEO Expert",
   description:
-    "Web Developer Expert in React, Next.js, Nuxt & TypeScript. 10 years of experience.",
+    "Web & Mobile Developer Expert in React, Next.js, React Native & TypeScript. 7 years of experience.",
 };
 
 export default function RootLayout({

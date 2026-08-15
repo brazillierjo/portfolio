@@ -1,3 +1,5 @@
+export const YEARS_OF_EXPERIENCE = 7;
+
 export const PERSONAL_INFO = {
   name: "Johan R. BRAZILLIER",
   initials: "JB",

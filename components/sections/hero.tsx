@@ -7,7 +7,7 @@ import { motion, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { PERSONAL_INFO } from "@/lib/constants/personal";
+import { PERSONAL_INFO, YEARS_OF_EXPERIENCE } from "@/lib/constants/personal";
 import { Link } from "@/i18n/navigation";
 
 const containerVariants = {
@@ -71,16 +71,8 @@ function AnimatedCounter({ value }: { value: number }) {
   return <span>{hasStarted ? displayValue : 0}</span>;
 }
 
-function calculateYearsOfExperience(): number {
-  const startDate = new Date("2020-01-01");
-  const now = new Date();
-  const years = (now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
-  return Math.floor(years);
-}
-
 export function HeroSection() {
   const t = useTranslations("hero");
-  const yearsOfExperience = calculateYearsOfExperience();
 
   return (
     <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden py-20">
@@ -159,7 +151,7 @@ export function HeroSection() {
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex items-center justify-center gap-2">
               <span className="text-primary text-4xl font-bold md:text-5xl">
-                <AnimatedCounter value={yearsOfExperience} />+
+                <AnimatedCounter value={YEARS_OF_EXPERIENCE} />+
               </span>
               <span className="text-muted-foreground text-left text-xs font-medium uppercase">
                 {t("yearsExperience")}
