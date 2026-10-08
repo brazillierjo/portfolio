@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        // Les CV contiennent email et téléphone : on les garde téléchargeables
+        // mais hors des moteurs de recherche.
+        source: "/cv/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

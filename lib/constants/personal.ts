@@ -9,7 +9,6 @@ export const PERSONAL_INFO = {
     it: "Sviluppatore Web & Mobile | Esperto React, Next.js, React Native & TypeScript",
   },
   email: "j.brazillier@gmail.com",
-  phone: "+33 6 38 02 76 49",
   location: "Nice, France",
   available: true,
   social: {
