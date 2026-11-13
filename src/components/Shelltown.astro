@@ -1,0 +1,195 @@
+---
+import { Picture } from "astro:assets";
+import Project from "./Project.astro";
+import Video from "./Video.astro";
+import cli from "@/assets/shelltown/cli.webp";
+import icon from "@/assets/shelltown/icon.png";
+import meeting from "@/assets/shelltown/meeting.webp";
+import zoomPoster from "@/assets/shelltown/zoom-poster.webp";
+import zoomMp4 from "@/assets/video/shelltown-zoom.mp4?url";
+import { LINKS } from "@/data/profile";
+import { COPY, type Lang } from "@/i18n/copy";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = COPY[lang];
+const s = t.shelltown;
+const stack = [
+  "Rust",
+  "tokio",
+  "SQLite",
+  "Swift",
+  "AppKit",
+  "WebKit",
+  "Sparkle",
+  "TypeScript",
+  "Canvas 2D",
+  "xterm.js",
+  "Vite",
+  "Vitest",
+];
+---
+
+<Project
+  id="shelltown"
+  flip
+  colors={{ accent: "#d4a64c", edge: "#a77c2a", label: "#1a1408", stage: "#efe6d4" }}
+  name="Shelltown"
+  icon={icon}
+  teaser={s}
+  lang={lang}
+  links={[{ href: LINKS.shelltown.site, label: s.link }]}
+>
+  <figure slot="visual" class="film">
+    <div class="plate">
+      <Video src={zoomMp4} poster={zoomPoster} posterWidth={960} label={s.filmLabel} lang={lang} />
+    </div>
+  </figure>
+
+  <p class="lead intro">{s.intro}</p>
+
+  <div class="shots">
+    <figure>
+      <div class="plate">
+        <Picture
+          src={cli}
+          alt={s.shots.cli}
+          formats={["avif"]}
+          fallbackFormat="webp"
+          widths={[640, 960, 1280]}
+          sizes="(min-width: 1024px) 520px, 92vw"
+          loading="lazy"
+        />
+      </div>
+      <figcaption>{s.shots.cli}</figcaption>
+    </figure>
+    <figure>
+      <div class="plate">
+        <Picture
+          src={meeting}
+          alt={s.shots.meeting}
+          formats={["avif"]}
+          fallbackFormat="webp"
+          widths={[640, 960, 1400]}
+          sizes="(min-width: 1024px) 620px, 92vw"
+          loading="lazy"
+        />
+      </div>
+      <figcaption>{s.shots.meeting}</figcaption>
+    </figure>
+  </div>
+
+  <div class="features">
+    {s.features.map((f) => (
+      <article>
+        <h5>{f.title}</h5>
+        <p>{f.text}</p>
+      </article>
+    ))}
+  </div>
+
+  <h4 class="h">{s.builtTitle}</h4>
+  <p class="built">{s.built}</p>
+  <ul class="tags">
+    {stack.map((x) => (
+      <li>{x}</li>
+    ))}
+  </ul>
+</Project>
+
+<style>
+  /* Plaques à la manière de Shelltown : onyx, filet de laiton, ombre franche */
+  .film {
+    margin: 0;
+    width: 100%;
+  }
+  .film .plate {
+    aspect-ratio: 960 / 608;
+  }
+  .plate {
+    overflow: hidden;
+    border: 1px solid #3b3220;
+    box-shadow:
+      0 0 0 5px #0c1d1b,
+      0 0 0 6px #d4a64c,
+      10px 10px 0 6px #000;
+  }
+  .plate :global(img) {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    margin: 0;
+    max-width: 62ch;
+  }
+  .shots {
+    display: grid;
+    grid-template-columns: minmax(0, 945fr) minmax(0, 1100fr);
+    gap: clamp(20px, 3vw, 40px);
+    align-items: start;
+    margin-top: clamp(28px, 3.5vw, 44px);
+  }
+  .shots figure {
+    margin: 0;
+  }
+  .shots figcaption {
+    margin-top: 18px;
+    font-size: var(--step--1);
+    color: var(--muted);
+    max-width: 44ch;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 clamp(18px, 2.4vw, 32px);
+    margin-top: clamp(32px, 4vw, 48px);
+  }
+  .features article {
+    padding-top: 16px;
+    border-top: 2px solid var(--c);
+  }
+  h5 {
+    margin: 0 0 6px;
+    font-size: 1.125rem;
+    font-weight: 850;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+  .features p,
+  .built {
+    margin: 0;
+    color: var(--muted);
+  }
+  .features p {
+    font-size: var(--step--1);
+  }
+  .h {
+    margin: clamp(36px, 4.5vw, 56px) 0 12px;
+    font-size: var(--step-2);
+    font-weight: 850;
+    letter-spacing: -0.025em;
+  }
+  .built {
+    max-width: 70ch;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1080px) {
+    .features {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 28px;
+    }
+  }
+  @media (max-width: 760px) {
+    .shots {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 520px) {
+    .features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

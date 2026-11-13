@@ -1,0 +1,67 @@
+---
+import Contact from "./Contact.astro";
+import FastFlix from "./FastFlix.astro";
+import Header from "./Header.astro";
+import Hero from "./Hero.astro";
+import Method from "./Method.astro";
+import Mio from "./Mio.astro";
+import Missions from "./Missions.astro";
+import Path from "./Path.astro";
+import Shelltown from "./Shelltown.astro";
+import Base from "@/layouts/Base.astro";
+import { COPY, type Lang } from "@/i18n/copy";
+import { IDS } from "@/i18n/ids";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = COPY[lang];
+---
+
+<Base lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <section id={IDS[lang].projects} class="projects" data-theme="paper">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="title">{t.projects.title}</h2>
+          <p class="lead muted">{t.projects.intro}</p>
+        </div>
+        <Mio lang={lang} />
+        <Shelltown lang={lang} />
+        <FastFlix lang={lang} />
+      </div>
+    </section>
+    <Method lang={lang} />
+    <Missions lang={lang} />
+    <Path lang={lang} />
+    <Contact lang={lang} />
+  </main>
+</Base>
+
+<style>
+  .projects {
+    padding-block: var(--section);
+  }
+  .head {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(16px, 4vw, 64px);
+    align-items: end;
+    margin-bottom: clamp(24px, 3vw, 40px);
+  }
+  .head .title,
+  .head .lead {
+    margin: 0;
+  }
+  .head .lead {
+    max-width: 48ch;
+  }
+  @media (max-width: 860px) {
+    .head {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

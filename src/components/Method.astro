@@ -1,0 +1,145 @@
+---
+import Heatmap from "./Heatmap.astro";
+import { COPY, type Lang } from "@/i18n/copy";
+import { IDS } from "@/i18n/ids";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const m = COPY[lang].method;
+---
+
+<section id={IDS[lang].method} class="method" data-theme="ink">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="title">{m.title}</h2>
+      <p class="lead muted">{m.lead}</p>
+    </div>
+
+    <div class="chart">
+      <Heatmap lang={lang} />
+    </div>
+
+    <ul class="practices">
+      {m.practices.map((p) => (
+        <li>
+          <h3>{p.title}</h3>
+          <p class="muted">{p.text}</p>
+        </li>
+      ))}
+    </ul>
+
+    <p class="tools-line subtitle">
+      <a class="link" href="#shelltown" data-open-project>
+        {m.toolsLine}
+      </a>
+    </p>
+
+    <div class="ai">
+      <h3 class="subtitle">{m.aiTitle}</h3>
+      <dl>
+        {m.ai.map((a) => (
+          <div>
+            <dt>{a.title}</dt>
+            <dd class="muted">{a.text}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</section>
+
+<style>
+  .method {
+    padding-block: var(--section);
+  }
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    gap: clamp(16px, 4vw, 64px);
+    align-items: end;
+  }
+  .intro .title {
+    margin: 0;
+  }
+  .intro .lead {
+    margin: 0;
+  }
+  .chart {
+    margin-top: clamp(28px, 4vw, 48px);
+    padding: clamp(20px, 3vw, 36px);
+    border-radius: clamp(20px, 2.4vw, 28px);
+    background: var(--sheet);
+  }
+  .practices {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 clamp(24px, 4vw, 56px);
+    list-style: none;
+    padding: 0;
+    margin: clamp(32px, 4.5vw, 56px) 0 0;
+  }
+  .practices li {
+    padding: 18px 0 28px;
+    border-top: 1px solid var(--line);
+  }
+  .practices h3 {
+    margin: 0 0 8px;
+    font-size: var(--step-1);
+    font-weight: 850;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .practices p {
+    margin: 0;
+  }
+  .practices p {
+    font-size: var(--step--1);
+  }
+  .tools-line {
+    margin: clamp(12px, 2vw, 24px) 0 0;
+    max-width: 40ch;
+  }
+  .tools-line a {
+    color: #7ee6a6;
+  }
+  .ai {
+    margin-top: clamp(40px, 5vw, 64px);
+  }
+  .ai h3 {
+    margin: 0 0 16px;
+  }
+  .ai dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 clamp(24px, 4vw, 56px);
+    margin: 0;
+  }
+  .ai dl div {
+    padding: 16px 0 20px;
+    border-top: 1px solid var(--line);
+  }
+  .ai dt {
+    font-weight: 850;
+  }
+  .ai dd {
+    margin: 4px 0 0;
+    font-size: var(--step--1);
+  }
+  @media (max-width: 960px) {
+    .intro {
+      grid-template-columns: 1fr;
+    }
+    .practices,
+    .ai dl {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 600px) {
+    .practices,
+    .ai dl {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

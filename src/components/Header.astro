@@ -1,0 +1,299 @@
+---
+import { PROFILE } from "@/data/profile";
+import { COPY, LANGS, LOCALES, type Lang } from "@/i18n/copy";
+import { IDS } from "@/i18n/ids";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = COPY[lang];
+const id = IDS[lang];
+const links = [
+  { href: `#${id.projects}`, label: t.nav.projects },
+  { href: `#${id.method}`, label: t.nav.method },
+  { href: `#${id.missions}`, label: t.nav.missions },
+  { href: `#${id.path}`, label: t.nav.path },
+  { href: `#${id.contact}`, label: t.nav.contact },
+];
+---
+
+<header class="site-header" data-theme="paper" data-header>
+  <div class="wrap bar">
+    <a href="#top" class="brand" title={PROFILE.name}>
+      Johan R‑B
+    </a>
+
+    <nav class="nav" aria-label={t.nav.menu}>
+      <ul>
+        {links.map((l) => (
+          <li>
+            <a href={l.href}>{l.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <ul class="langs" aria-label={t.nav.languages}>
+        {LANGS.map((l) => (
+          <li>
+            <a
+              href={LOCALES[l].path}
+              hreflang={LOCALES[l].html}
+              lang={LOCALES[l].html}
+              title={LOCALES[l].label}
+              aria-label={LOCALES[l].label}
+              aria-current={l === lang ? "page" : undefined}
+            >
+              {LOCALES[l].short}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a class="btn btn-green cv" href={PROFILE.cv[lang]} download>
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path
+            d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13.5h10"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        {t.nav.cv}
+      </a>
+      <details class="menu">
+        <summary aria-label={t.nav.menu}>
+          <span></span>
+          <span></span>
+        </summary>
+        <ul>
+          {links.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))}
+          <li class="menu-langs" aria-label={t.nav.languages}>
+            {LANGS.map((l) => (
+              <a
+                href={LOCALES[l].path}
+                hreflang={LOCALES[l].html}
+                lang={LOCALES[l].html}
+                aria-current={l === lang ? "page" : undefined}
+              >
+                {LOCALES[l].short}
+              </a>
+            ))}
+          </li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 50;
+    height: var(--header-h);
+    background: color-mix(in oklab, var(--bg) 94%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+    transition:
+      background-color 0.45s var(--ease-in-out-soft),
+      color 0.45s var(--ease-in-out-soft),
+      border-color 0.45s;
+  }
+  @supports (backdrop-filter: blur(1px)) {
+    .site-header {
+      backdrop-filter: saturate(1.4) blur(14px);
+    }
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 100%;
+  }
+  .brand {
+    font-weight: 850;
+    letter-spacing: -0.03em;
+    font-size: 1.125rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav {
+    margin-inline: auto;
+  }
+  .nav ul {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 0.9375rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  .nav a:hover {
+    background: color-mix(in oklab, var(--fg) 8%, transparent);
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+  }
+  .nav + .actions {
+    margin-left: 0;
+  }
+  /* Langues : quatre codes courts, la langue courante soulignée */
+  .langs {
+    display: flex;
+    list-style: none;
+    margin: 0 4px 0 0;
+    padding: 0;
+  }
+  .langs a,
+  .menu-langs a {
+    display: inline-grid;
+    place-items: center;
+    min-width: 34px;
+    min-height: 40px;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 850;
+    text-decoration: none;
+    color: var(--muted);
+    transition:
+      color 0.2s,
+      background-color 0.2s;
+  }
+  .langs a:hover,
+  .menu-langs a:hover {
+    color: var(--fg);
+    background: color-mix(in oklab, var(--fg) 8%, transparent);
+  }
+  .langs a[aria-current],
+  .menu-langs a[aria-current] {
+    color: var(--fg);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+  .menu-langs {
+    display: flex;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 8px 6px 2px;
+    border-top: 1px solid var(--line);
+  }
+  .menu-langs a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .cv {
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 0.9375rem;
+    box-shadow: 0 3px 0 var(--green-edge);
+  }
+  .cv:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 var(--green-edge);
+  }
+  .menu {
+    display: none;
+    position: relative;
+  }
+  .menu summary {
+    display: grid;
+    place-content: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 999px;
+  }
+  .menu summary::-webkit-details-marker {
+    display: none;
+  }
+  .menu summary span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: currentColor;
+    transition:
+      translate 0.25s var(--ease-out-soft),
+      rotate 0.25s var(--ease-out-soft);
+  }
+  .menu[open] summary span:first-child {
+    translate: 0 3.75px;
+    rotate: 45deg;
+  }
+  .menu[open] summary span:last-child {
+    translate: 0 -3.75px;
+    rotate: -45deg;
+  }
+  .menu ul {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    min-width: 220px;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    border-radius: 18px;
+    background: var(--sheet);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 40px -16px rgb(0 0 0 / 0.35);
+    transform-origin: top right;
+    animation: menu-in 0.22s var(--ease-out-soft);
+  }
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      scale: 0.96;
+    }
+  }
+  .menu li a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.0625rem;
+    font-weight: 750;
+  }
+  .menu li a:hover {
+    background: color-mix(in oklab, var(--fg) 7%, transparent);
+  }
+
+  @media (max-width: 1100px) {
+    .langs,
+    .nav {
+      display: none;
+    }
+    .menu {
+      display: block;
+    }
+  }
+  @media (max-width: 380px) {
+    .cv svg {
+      display: none;
+    }
+  }
+</style>

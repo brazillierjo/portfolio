@@ -1,0 +1,94 @@
+---
+import { COPY, type Lang } from "@/i18n/copy";
+import { IDS } from "@/i18n/ids";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const m = COPY[lang].missions;
+---
+
+<section id={IDS[lang].missions} class="missions" data-theme="paper">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="title">{m.title}</h2>
+      <p class="lead muted">{m.intro}</p>
+    </div>
+    <ul class="list">
+      {m.items.map((it) => (
+        <li>
+          <div class="who">
+            <h3>{it.client}</h3>
+            <p class="small muted">{it.period}</p>
+          </div>
+          <div class="what">
+            <p class="context">{it.context}</p>
+            <p class="muted">{it.text}</p>
+            <ul class="tags">
+              {it.tags.map((x) => (
+                <li>{x}</li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .missions {
+    padding-block: var(--section) 0;
+  }
+  .head {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: clamp(16px, 4vw, 64px);
+    align-items: end;
+  }
+  .head .title,
+  .head .lead {
+    margin: 0;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: clamp(24px, 3.5vw, 40px) 0 0;
+  }
+  .list > li {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 16px clamp(24px, 6vw, 96px);
+    padding: clamp(20px, 2.6vw, 30px) 0;
+    border-top: 1px solid var(--line);
+  }
+  .who h3 {
+    margin: 0;
+    font-size: var(--step-2);
+    font-weight: 850;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    max-width: 18ch;
+  }
+  .who p {
+    margin: 10px 0 0;
+  }
+  .context {
+    margin: 0 0 10px;
+    font-weight: 850;
+  }
+  .what > p.muted {
+    margin: 0;
+    max-width: 62ch;
+  }
+  .what .tags {
+    margin-top: 20px;
+  }
+  @media (max-width: 860px) {
+    .head,
+    .list > li {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

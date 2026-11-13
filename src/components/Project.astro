@@ -1,0 +1,356 @@
+---
+// Un projet, à la manière des blocs du site de Mio : un visuel posé sur une
+// scène pastel avec deux pastilles, et à côté l'accroche, trois points forts
+// sur des carrés de couleur et un bouton en relief. Le détail se déplie dans
+// une feuille blanche. Sans JavaScript, le détail reste visible.
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import { COPY, type Lang } from "@/i18n/copy";
+import type { Teaser } from "@/i18n/types";
+
+interface Props {
+  id: string;
+  name: string;
+  icon: ImageMetadata;
+  teaser: Teaser;
+  links: { href: string; label: string }[];
+  lang: Lang;
+  /** Couleurs du produit : accent, bord 3D, encre sur l'accent, fond de scène */
+  colors: { accent: string; edge: string; label: string; stage: string };
+  flip?: boolean;
+}
+const { id, name, icon, teaser, links, lang, colors, flip = false } = Astro.props;
+const t = COPY[lang].projects;
+const style = `--c:${colors.accent};--c-edge:${colors.edge};--c-label:${colors.label};--c-stage:${colors.stage}`;
+---
+
+<article id={id} class:list={["project", { flip }]} style={style} data-project>
+  <div class="teaser">
+    <div class="stage">
+      <div class="visual">
+        <slot name="visual" />
+      </div>
+      {teaser.chips.map(([title, sub], i) => (
+        <p class:list={["chip", `chip-${i}`]}>
+          <span class="chip-dot" aria-hidden="true" />
+          <span>
+            <strong>{title}</strong>
+            <span>{sub}</span>
+          </span>
+        </p>
+      ))}
+    </div>
+
+    <div class="info">
+      <div class="id">
+        <Image src={icon} alt="" width={64} height={64} class="icon" loading="lazy" />
+        <h3 class="name">{name}</h3>
+      </div>
+      <p class="tagline">{teaser.tagline}</p>
+      <ul class="highlights">
+        {teaser.highlights.map((h) => (
+          <li>
+            <span class="tick" aria-hidden="true">
+              <svg viewBox="0 0 16 16">
+                <path
+                  d="M3.5 8.5l3 3 6-7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            {h}
+          </li>
+        ))}
+      </ul>
+      <dl class="facts">
+        {teaser.facts.map(([k, v]) => (
+          <div>
+            <dt>{k}</dt>
+            <dd>{v}</dd>
+          </div>
+        ))}
+      </dl>
+      <div class="actions">
+        <button
+          type="button"
+          class="btn toggle"
+          aria-expanded="false"
+          aria-controls={`${id}-detail`}
+          data-more={t.more}
+          data-less={t.less}
+          data-toggle
+        >
+          <span data-toggle-label>{t.more}</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="M4 6l4 4 4-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+        <ul class="links">
+          {links.map((l) => (
+            <li>
+              <a class="link" href={l.href} rel="noopener" target="_blank">
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail" id={`${id}-detail`} data-detail>
+    <div class="detail-inner sheet">
+      <slot />
+    </div>
+  </div>
+</article>
+
+<style>
+  .project + :global(.project) {
+    margin-top: clamp(56px, 8vw, 104px);
+  }
+  .teaser {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: center;
+  }
+  .flip .teaser {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+  .flip .stage {
+    order: 2;
+  }
+
+  /* La scène : un aplat pastel du produit, comme les vignettes de modes de Mio */
+  .stage {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: clamp(320px, 34vw, 460px);
+    padding: clamp(24px, 4vw, 48px);
+    border-radius: var(--r-sheet);
+    background: var(--c-stage);
+  }
+  .visual {
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .chip {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 9px 14px 9px 10px;
+    border-radius: var(--r-tile);
+    background: var(--sheet);
+    box-shadow: var(--shadow-float);
+    line-height: 1.2;
+    max-width: 230px;
+  }
+  .chip strong {
+    display: block;
+    font-weight: 900;
+    font-size: 0.9375rem;
+    color: var(--ink);
+  }
+  .chip strong + span {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  .chip-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--c);
+    flex: none;
+  }
+  .chip-0 {
+    top: 18px;
+    left: 18px;
+  }
+  .chip-1 {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .id {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .icon {
+    width: 56px;
+    height: auto;
+    border-radius: 22.5%;
+    box-shadow: var(--shadow-float);
+  }
+  .name {
+    margin: 0;
+    font-size: var(--step-4);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+  }
+  .tagline {
+    margin: 14px 0 0;
+    font-size: var(--step-2);
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink-2);
+    max-width: 26ch;
+  }
+  .highlights {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0 0;
+    display: grid;
+    gap: 12px;
+  }
+  .highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-weight: 600;
+  }
+  /* Le carré de couleur de Mio, avec sa lèvre sombre */
+  .tick {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    margin-top: -1px;
+    border-radius: 8px;
+    background: var(--c);
+    color: var(--c-label);
+    box-shadow: inset 0 -2.5px 0 rgb(0 0 0 / 0.2);
+    flex: none;
+  }
+  .tick svg {
+    width: 15px;
+    height: 15px;
+  }
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 22px 0 0;
+  }
+  .facts div {
+    display: flex;
+    gap: 6px;
+    padding: 7px 11px;
+    border-radius: var(--r-chip);
+    background: var(--tile);
+    font-size: 0.8125rem;
+    line-height: 1.2;
+  }
+  .facts dt {
+    color: var(--muted);
+    font-weight: 700;
+  }
+  .facts dd {
+    margin: 0;
+    font-weight: 850;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 22px;
+    margin-top: 26px;
+  }
+  /* Sans JavaScript : pas de bouton, le détail est simplement affiché */
+  .toggle {
+    display: none;
+    --face: var(--c);
+    --edge: var(--c-edge);
+    --label: var(--c-label);
+    box-shadow: 0 4px 0 var(--edge);
+  }
+  .toggle:active {
+    box-shadow: 0 0 0 var(--edge);
+  }
+  :global(.js) .toggle {
+    display: inline-flex;
+  }
+  .toggle svg {
+    margin: 0 -0.2em 0 0;
+    transition: rotate 0.3s var(--ease-out-soft);
+  }
+  .toggle[aria-expanded="true"] svg {
+    rotate: 180deg;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .detail {
+    overflow: hidden;
+    padding: 4px 2px 8px;
+    margin-inline: -2px;
+  }
+  :global(.js) .detail:not(.is-open) {
+    display: none;
+  }
+  .detail-inner {
+    margin-top: clamp(20px, 2.4vw, 28px);
+    padding: clamp(24px, 4vw, 48px);
+  }
+
+  @media (max-width: 900px) {
+    .teaser,
+    .flip .teaser {
+      grid-template-columns: 1fr;
+    }
+    .flip .stage {
+      order: 0;
+    }
+    .stage {
+      min-height: 0;
+      padding: 56px 20px;
+    }
+    .chip {
+      padding: 7px 10px 7px 8px;
+      max-width: 190px;
+    }
+    .chip strong {
+      font-size: 0.8125rem;
+    }
+    .chip strong + span {
+      font-size: 0.75rem;
+    }
+    .chip-0 {
+      top: 12px;
+      left: 12px;
+    }
+    .chip-1 {
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+</style>

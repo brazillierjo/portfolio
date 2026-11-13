@@ -1,0 +1,178 @@
+---
+import { COPY, type Lang } from "@/i18n/copy";
+import { IDS } from "@/i18n/ids";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = COPY[lang].path;
+---
+
+<section id={IDS[lang].path} class="path" data-theme="paper">
+  <div class="wrap">
+    <h2 class="title">{p.title}</h2>
+
+    <div class="cols">
+      <div>
+        <h3 class="subtitle">{p.jobsTitle}</h3>
+        <ol class="rows">
+          {p.jobs.map((j) => (
+            <li>
+              <span class="when small muted">{j.period}</span>
+              <div>
+                <p class="role">
+                  {j.role}, <strong>{j.company}</strong>
+                </p>
+                <p class="small muted">
+                  {j.place}. {j.text}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div class="side">
+        <h3 class="subtitle">{p.schoolTitle}</h3>
+        <ol class="rows">
+          {p.schools.map((s) => (
+            <li>
+              <span class="when small muted">{s.period}</span>
+              <div>
+                <p class="role">
+                  <strong>{s.company}</strong>
+                </p>
+                <p class="small muted">
+                  {s.role}
+                  {s.place && `, ${s.place}`}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <h3 class="subtitle">{p.languagesTitle}</h3>
+        <dl class="langs">
+          {p.languages.map(([k, v]) => (
+            <div>
+              <dt>{k}</dt>
+              <dd class="muted">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+
+    <div class="stack">
+      <h3 class="subtitle">{p.stackTitle}</h3>
+      <dl>
+        {p.stack.map((g) => (
+          <div>
+            <dt>{g.group}</dt>
+            <dd class="muted">{g.items}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</section>
+
+<style>
+  .path {
+    padding-block: var(--section);
+  }
+  .path > .wrap > .title {
+    margin: 0;
+  }
+  .cols {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: clamp(28px, 5vw, 72px);
+    margin-top: clamp(24px, 3.5vw, 40px);
+  }
+  .subtitle {
+    margin: 0 0 8px;
+    font-size: var(--step-1);
+  }
+  .side .subtitle + .rows + .subtitle {
+    margin-top: 48px;
+  }
+  .rows {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .rows li {
+    display: grid;
+    grid-template-columns: 7.5em minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .when {
+    padding-top: 0.2em;
+    font-variant-numeric: tabular-nums;
+  }
+  .role {
+    margin: 0 0 4px;
+  }
+  .role strong {
+    font-weight: 850;
+  }
+  .rows .small {
+    margin: 0;
+    max-width: 58ch;
+  }
+  .langs,
+  .stack dl {
+    margin: 0;
+  }
+  .langs div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+  }
+  .langs dd {
+    margin: 0;
+  }
+  .stack {
+    margin-top: clamp(36px, 4.5vw, 56px);
+  }
+  .stack dl {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 clamp(20px, 3vw, 40px);
+  }
+  .stack dl div {
+    padding: 16px 0 22px;
+    border-top: 1px solid var(--line);
+  }
+  .stack dt {
+    font-weight: 850;
+  }
+  .stack dd {
+    margin: 6px 0 0;
+    font-size: var(--step--1);
+    line-height: 1.6;
+  }
+  @media (max-width: 960px) {
+    .cols {
+      grid-template-columns: 1fr;
+    }
+    .stack dl {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 600px) {
+    .stack dl {
+      grid-template-columns: 1fr;
+    }
+    .rows li {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+</style>

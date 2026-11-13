@@ -1,0 +1,182 @@
+---
+// Calendrier de commits 2026 : une case par jour, les semaines en colonnes.
+// Données réelles générées par scripts/activity.mjs (comptes seulement).
+import { ACTIVITY } from "@/data/profile";
+import { COPY, LOCALES, type Lang } from "@/i18n/copy";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const m = COPY[lang].method;
+
+const CELL = 12;
+const GAP = 3;
+const STEP = CELL + GAP;
+const TOP = 18;
+const start = new Date(`${ACTIVITY.since}T00:00:00Z`);
+const offset = (start.getUTCDay() + 6) % 7; // lundi = 0
+const fmt = new Intl.DateTimeFormat(LOCALES[lang].intl, {
+  day: "numeric",
+  month: "long",
+  timeZone: "UTC",
+});
+const level = (n: number) => (n === 0 ? 0 : n < 6 ? 1 : n < 16 ? 2 : n < 36 ? 3 : 4);
+
+const cells = ACTIVITY.days.map((count, i) => {
+  const date = new Date(start);
+  date.setUTCDate(start.getUTCDate() + i);
+  const k = i + offset;
+  return {
+    x: Math.floor(k / 7) * STEP,
+    y: TOP + (k % 7) * STEP,
+    col: Math.floor(k / 7),
+    count,
+    level: level(count),
+    label: m.dayLabel(fmt.format(date), count),
+  };
+});
+const cols = Math.floor((ACTIVITY.days.length - 1 + offset) / 7) + 1;
+const width = cols * STEP - GAP;
+const height = TOP + 7 * STEP - GAP;
+
+// Étiquettes de mois sur la première colonne qui contient le 1er du mois
+const months: { x: number; label: string }[] = [];
+for (let mo = 0; mo < 12; mo++) {
+  const d = new Date(Date.UTC(start.getUTCFullYear(), mo, 1));
+  const i = Math.round((d.getTime() - start.getTime()) / 86400000);
+  if (i < 0 || i >= ACTIVITY.days.length) continue;
+  months.push({ x: Math.floor((i + offset) / 7) * STEP, label: m.months[mo]! });
+}
+---
+
+<figure class="heatmap" data-heatmap>
+  <div class="scroller">
+    <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="heatmap-title heatmap-desc">
+      <title id="heatmap-title">{m.chartTitle}</title>
+      <desc id="heatmap-desc">{m.chartCaption}</desc>
+      {months.map((mo) => (
+        <text x={mo.x} y="10" class="month">
+          {mo.label}
+        </text>
+      ))}
+      {cells.map((c) => (
+        <rect
+          x={c.x}
+          y={c.y}
+          width={CELL}
+          height={CELL}
+          rx="2.5"
+          class={`l${c.level}`}
+          style={`--c:${c.col}`}
+        >
+          <title>{c.label}</title>
+        </rect>
+      ))}
+    </svg>
+  </div>
+  <figcaption>
+    <p class="caption">{m.chartCaption}</p>
+    <p class="legend small muted" aria-hidden="true">
+      {m.chartLegendLess}
+      {[0, 1, 2, 3, 4].map((l) => (
+        <i class={`l${l}`}></i>
+      ))}
+      {m.chartLegendMore}
+    </p>
+  </figcaption>
+</figure>
+
+<style>
+  .heatmap {
+    margin: 0;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .month {
+    font-size: 9px;
+    fill: var(--muted);
+    font-family: var(--font-sans);
+  }
+  rect,
+  .legend i {
+    fill: #262c34;
+    background: #262c34;
+  }
+  .l1 {
+    fill: #174a2e;
+    background: #174a2e;
+  }
+  .l2 {
+    fill: #1c7a43;
+    background: #1c7a43;
+  }
+  .l3 {
+    fill: #2bb062;
+    background: #2bb062;
+  }
+  .l4 {
+    fill: #7ee6a6;
+    background: #7ee6a6;
+  }
+  rect {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js) .heatmap rect {
+      scale: 0;
+      transition: scale 0.5s var(--ease-out-soft);
+      transition-delay: calc(var(--c) * 16ms);
+    }
+    :global(.js) .heatmap:global(.is-in) rect {
+      scale: 1;
+    }
+  }
+  figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px 32px;
+    margin-top: 20px;
+  }
+  .caption {
+    margin: 0;
+    font-weight: 560;
+    max-width: 60ch;
+  }
+  .legend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+  }
+  .legend i {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 2.5px;
+  }
+  .legend i:first-of-type {
+    margin-left: 6px;
+  }
+  .legend i:last-of-type {
+    margin-right: 6px;
+  }
+  @media (max-width: 640px) {
+    .scroller {
+      overflow-x: auto;
+      margin-inline: calc(var(--gutter) * -1);
+      padding-inline: var(--gutter);
+      scrollbar-width: none;
+    }
+    svg {
+      width: 640px;
+      max-width: none;
+    }
+  }
+</style>

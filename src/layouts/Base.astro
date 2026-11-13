@@ -1,0 +1,88 @@
+---
+import "@/styles/global.css";
+import nunitoLatin from "@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2?url";
+import { getImage } from "astro:assets";
+import avatar from "@/assets/me/avatar.png";
+import ogImage from "@/assets/me/og.png";
+import { PROFILE } from "@/data/profile";
+import { COPY, LANGS, LOCALES, type Lang } from "@/i18n/copy";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = COPY[lang];
+const site = Astro.site!;
+const canonical = new URL(LOCALES[lang].path, site).href;
+const og = await getImage({ src: ogImage, width: 1200, format: "png" });
+const photo = await getImage({ src: avatar, width: 400, format: "webp" });
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: PROFILE.name,
+  jobTitle: PROFILE.role,
+  url: canonical,
+  image: new URL(photo.src, site).href,
+  email: `mailto:${PROFILE.email}`,
+  address: { "@type": "PostalAddress", addressLocality: "Nice", addressCountry: "FR" },
+  sameAs: [PROFILE.linkedin, PROFILE.github],
+  knowsAbout: [
+    "Claude Code",
+    "Codex",
+    "Agentic AI",
+    "LLM integration",
+    "React Native",
+    "Expo",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Swift",
+    "Rust",
+  ],
+  knowsLanguage: ["fr", "en", "it"],
+};
+---
+
+<!doctype html>
+<html lang={LOCALES[lang].html}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      document.documentElement.classList.add("js");
+    </script>
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <link rel="canonical" href={canonical} />
+    {LANGS.map((l) => (
+      <link rel="alternate" hreflang={LOCALES[l].html} href={new URL(LOCALES[l].path, site).href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL("/", site).href} />
+    <link rel="preload" href={nunitoLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#f5f6f8" />
+    <meta name="author" content={PROFILE.name} />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={t.meta.ogLocale} />
+    <meta property="og:image" content={new URL(og.src, site).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import "@/scripts/main";
+    </script>
+  </body>
+</html>
