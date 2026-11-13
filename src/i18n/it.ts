@@ -5,7 +5,7 @@ export const it: Copy = {
   meta: {
     title: `${PROFILE.name}, ${PROFILE.role}`,
     description:
-      "AI Full Stack Engineer a Nizza. Progetto e porto in produzione prodotti di IA completi su iOS, Android, web e macOS, lavorando con Claude Code e Codex.",
+      "AI Full Stack Engineer a Nizza. Sviluppatore full stack, rilascio applicazioni complete su iOS, Android, web e macOS programmando con Claude Code e Codex.",
     ogLocale: "it_IT",
   },
   nav: {
@@ -19,7 +19,7 @@ export const it: Copy = {
     languages: "Lingue del sito",
   },
   hero: {
-    lead: "Progetto e porto in produzione prodotti di IA completi, dall'app mobile fino al server. Claude Code e Codex sono la mia squadra: io do la direzione, divido il lavoro, rileggo e rilascio.",
+    lead: "Sviluppatore full stack, rilascio applicazioni complete, dall'app mobile fino al server. Programmo con Claude Code e Codex: io do la direzione, divido il lavoro, rileggo e rilascio.",
     ctaContact: "Contattami",
     ctaCv: "Scarica il CV",
     figures: {

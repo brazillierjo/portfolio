@@ -30,7 +30,7 @@ function merge<T>(base: T, over: DeepPartial<T>): T {
 export const ch: Copy = merge(fr, {
   meta: {
     description:
-      "AI Full Stack Engineer. Je conçois et je mets en production des produits IA complets sur iOS, Android, web et macOS, avec Claude Code et Codex.",
+      "AI Full Stack Engineer. Développeur full stack, je livre des applications complètes sur iOS, Android, web et macOS en codant avec Claude Code et Codex.",
     ogLocale: "fr_CH",
   },
   method: {

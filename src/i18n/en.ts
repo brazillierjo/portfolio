@@ -5,7 +5,7 @@ export const en: Copy = {
   meta: {
     title: `${PROFILE.name}, ${PROFILE.role}`,
     description:
-      "AI Full Stack Engineer based in Nice, France. I design and ship complete AI products on iOS, Android, web and macOS, working with Claude Code and Codex.",
+      "AI Full Stack Engineer based in Nice, France. A full stack developer, I ship complete applications on iOS, Android, web and macOS, coding with Claude Code and Codex.",
     ogLocale: "en_US",
   },
   nav: {
@@ -19,7 +19,7 @@ export const en: Copy = {
     languages: "Site languages",
   },
   hero: {
-    lead: "I design and ship complete AI products, from the mobile app all the way to the server. Claude Code and Codex are my team: I set the direction, split the work, review it and ship.",
+    lead: "A full stack developer, I ship complete applications, from the mobile app all the way to the server. I code with Claude Code and Codex: I set the direction, split the work, review it and ship.",
     ctaContact: "Get in touch",
     ctaCv: "Download my resume",
     figures: {
