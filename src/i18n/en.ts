@@ -448,6 +448,12 @@ export const en: Copy = {
     elsewhere: "Online",
   },
   footer: "Designed and built with Astro, with no client-side JavaScript framework.",
+  consent: {
+    text: "This site uses Google Analytics, with cookies, to measure its audience. Is that OK with you?",
+    accept: "Accept",
+    refuse: "Decline",
+    manage: "Cookie settings",
+  },
   playVideo: "Play video",
   pauseVideo: "Pause video",
 };

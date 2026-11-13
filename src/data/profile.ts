@@ -12,6 +12,8 @@ export const PROFILE = {
   github: "https://github.com/brazillierjo",
   site: "https://brazillierjohan.fr",
   yearsOfExperience: 7,
+  // Propriété Google Analytics « brazillierjohan.fr » (flux web « portfolio »)
+  gaId: "G-FNN0Z7L0TK",
   cv: {
     fr: "/cv/CV-Johan-Rincon-Brazillier-FR.pdf",
     ch: "/cv/CV-Johan-Rincon-Brazillier-CH.pdf",

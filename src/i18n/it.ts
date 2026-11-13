@@ -457,6 +457,12 @@ export const it: Copy = {
     elsewhere: "Online",
   },
   footer: "Progettato e sviluppato con Astro, senza framework JavaScript lato client.",
+  consent: {
+    text: "Questo sito usa Google Analytics, con dei cookie, per misurare il pubblico. Va bene per te?",
+    accept: "Accetta",
+    refuse: "Rifiuta",
+    manage: "Gestisci i cookie",
+  },
   playVideo: "Riproduci il video",
   pauseVideo: "Metti in pausa il video",
 };

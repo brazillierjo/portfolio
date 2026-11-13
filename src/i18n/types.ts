@@ -127,6 +127,7 @@ export type Copy = {
     elsewhere: string;
   };
   footer: string;
+  consent: { text: string; accept: string; refuse: string; manage: string };
   playVideo: string;
   pauseVideo: string;
 };

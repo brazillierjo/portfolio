@@ -96,7 +96,12 @@ const c = t.contact;
       <p>
         © {new Date().getFullYear()} {PROFILE.name}
       </p>
-      <p>{t.footer}</p>
+      <p>
+        {t.footer}
+        <button type="button" class="manage" data-consent-open>
+          {t.consent.manage}
+        </button>
+      </p>
     </footer>
   </div>
 </section>
@@ -185,6 +190,18 @@ const c = t.contact;
   }
   .foot p {
     margin: 0;
+  }
+  .manage {
+    margin-left: 10px;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-weight: 800;
+    color: var(--ink-2);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
   }
   @media (max-width: 760px) {
     .ways {

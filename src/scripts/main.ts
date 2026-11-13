@@ -227,9 +227,77 @@ function menu() {
   });
 }
 
+/* Google Analytics, seulement après accord explicite (choix gardé dans le navigateur) */
+function consent() {
+  const banner = document.querySelector<HTMLElement>("[data-consent]");
+  if (!banner) return;
+  const id = banner.dataset.ga!;
+  const KEY = "consent-analytics";
+  let loaded = false;
+  const read = () => {
+    try {
+      return localStorage.getItem(KEY);
+    } catch {
+      return null;
+    }
+  };
+  const load = () => {
+    if (loaded) return;
+    loaded = true;
+    const w = window as unknown as { dataLayer: unknown[]; gtag: (...args: unknown[]) => void };
+    w.dataLayer = w.dataLayer || [];
+    w.gtag = function gtag() {
+      // gtag attend l'objet arguments tel quel
+      // eslint-disable-next-line prefer-rest-params
+      w.dataLayer.push(arguments);
+    };
+    w.gtag("js", new Date());
+    w.gtag("config", id);
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+    document.head.append(s);
+  };
+  const choose = (value: "granted" | "denied") => {
+    try {
+      localStorage.setItem(KEY, value);
+    } catch {
+      /* navigation privée : le choix vaut pour cette visite */
+    }
+    banner.hidden = true;
+    if (value === "granted") load();
+    else {
+      // Retirer son accord efface les cookies _ga et coupe le suivi déjà lancé
+      const host = location.hostname.replace(/^www\./, "");
+      document.cookie.split(";").forEach((c) => {
+        const name = c.split("=")[0]!.trim();
+        if (name.startsWith("_ga")) {
+          for (const domain of ["", `; domain=.${host}`])
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domain}`;
+        }
+      });
+      if (loaded) location.reload();
+    }
+  };
+  banner
+    .querySelectorAll<HTMLButtonElement>("[data-consent-choice]")
+    .forEach((b) =>
+      b.addEventListener("click", () => choose(b.dataset.consentChoice as "granted" | "denied")),
+    );
+  document.querySelectorAll("[data-consent-open]").forEach((b) =>
+    b.addEventListener("click", () => {
+      banner.hidden = false;
+    }),
+  );
+  const saved = read();
+  if (saved === "granted") load();
+  else if (saved !== "denied") banner.hidden = false;
+}
+
 headerTheme();
 videos();
 projects();
 reveals();
 contact();
 menu();
+consent();
